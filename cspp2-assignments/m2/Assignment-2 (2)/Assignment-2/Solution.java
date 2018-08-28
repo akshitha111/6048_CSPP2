@@ -1,5 +1,5 @@
 import java.util.Scanner;
-/**missing doc.
+/**doc missing.
 */
 public final class Solution {
     /** the program is to find the roots.
