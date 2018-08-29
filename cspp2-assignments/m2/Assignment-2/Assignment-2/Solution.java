@@ -1,3 +1,6 @@
+/**
+* author @akshitha.
+*/
 import java.util.Scanner;
 /**doc missing.
 */
