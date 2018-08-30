@@ -1,15 +1,24 @@
 
 import java.util.Scanner;
-public class Solution {
-    /**
-    *Fill this main function to print maximum of given array.
+/** Do not modify this main function.
+*/
+public final class Solution {
+    /** This is class.
     */
-    public static void main(String[] args) {
+    private Solution() {
+    /** This is constructor.
+    */
+    }
+/**
+* Class for solution.
+* @param args String
+*/
+    public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int a[] = new int[n];
+        int[] a = new int[n];
         for (int i = 0; i < n; i++) {
-            a[i] = sc.nextInt();     
+            a[i] = sc.nextInt();
         }
         int max = a[0];
         for (int i = 0; i < n; i++) {
@@ -20,3 +29,4 @@ public class Solution {
         System.out.println(max);
     }
     }
+
