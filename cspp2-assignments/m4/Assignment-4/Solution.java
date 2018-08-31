@@ -1,8 +1,8 @@
 import java.util.Scanner;
 /* reverse.
 */
-public final class Solution
-{/**
+public final class Solution {
+/**
 	Do not modify the main function. 
 	*/
 	private Solution() {
@@ -12,13 +12,11 @@ public final class Solution
 	/** class.
 	* @param args String
 	*/  
-	public static void main(final String[] args)
-	{
+	public static void main(final String[] args) {
 		Scanner sc = new Scanner(System.in);
 		String s = sc.nextLine();
 		String reverse = reverseString(s);	
-		System.out.println(reverse);
-		
+		System.out.println(reverse);		
 	}
 	/** function.
 	* @param a String
@@ -26,7 +24,7 @@ public final class Solution
 	*/
 	public static String reverseString(String a) {
 		String str = "";
-		for(int k = 0; k < a.length(); k+=1) {
+		for(int k = 0; k < a.length(); k += 1) {
 			str = a.charAt(k) + str;
 		}
 		return str;
