@@ -25,17 +25,11 @@ final class Solution {
      */
     static char[] replaceAll(final char[] charArray,
         final char oldChar, final char newChar) {
-	// write your code here
-        String str1 = new String(charArray) ;
-        str1.replace(oldChar,newChar);
-      
+    // write your code here
+        String str1 = new String(charArray);
+        str1.replace(oldChar, newChar);
         return charArray;
-        
     }
-
-    
-
-
     /**
      * Main function.
      *
