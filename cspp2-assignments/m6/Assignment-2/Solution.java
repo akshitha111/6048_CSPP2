@@ -26,15 +26,13 @@ final class Solution {
 
 	// write ypur code here
         for(int i = 0; i < rows; i++) {
-            if(i >= 50){
+            if(i >= 50) {
                 i = 100;
             i = 0;
-                
             }
 
         }
         return roundHundred(a, rows, columns);
-	
     }
     /**
      * Main function.
