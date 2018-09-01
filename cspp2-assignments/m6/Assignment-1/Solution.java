@@ -21,21 +21,16 @@ public final class Solution {
 	// write your code here
     	int b = 2;
     	for(int i = 2; i < n; i++){
-    		//int b = 0;
     	if(i%2 != 0) {
-    		//System.out.println(i);
     		b = i;
-    		//System.out.println(b);
     	int count = 0;
-    		if(b%i==0)    {		
-    			//System.out.println(b);
-    			count += 1;
-    	if(count!=2)
-    		
-    	System.out.println(i);
+    		if(b%i==0){		
+    	    count += 1;}
+    	    if(count!=2)    		
+    	    System.out.println(i);
     		
     	}
-    	}
+    	
     }
     }
     		
