@@ -28,8 +28,11 @@ final class Solution {
 	// write your code here
         String str1 = new String(charArray) ;
         str1.replace(oldChar,newChar);
+      
         return charArray;
-        }
+        
+    }
+
     
 
 
