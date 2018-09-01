@@ -22,8 +22,11 @@ public final class Solution {
     	
     	int count = 0;
     	for(int i =2;i<n;i++){
-    		if(i%2!=0)
+    		if(i%2!=0){
     		System.out.println((i));
+    		int arr[] = new int[n];
+    		}
+
     			
     		
     		
