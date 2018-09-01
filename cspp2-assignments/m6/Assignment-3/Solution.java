@@ -27,6 +27,7 @@ final class Solution {
         final char oldChar, final char newChar) {
 	// write your code here
         String str1 = new String(charArray) ;
+        str1.replace(oldChar,newChar);
         return charArray;
         }
     
