@@ -25,36 +25,12 @@ public final class Solution {
     		if(i%2!=0){
     		System.out.println((i));
     		int arr[] = new int[n];
-    		}
-
-    			
-    		
-    		
+    		}	
+    		   		
     	}
     	
-
-
-     	 
-
-    	   
-    
-
-    
-    		
-    	
-    	
     }
-    
-    		
-    			
-    			
-    		
-    		
-    		
-    	
-    		
-    	
-    
+   
     /**
     * main method as driver program.
     * @param args is the parameter for this method
