@@ -30,9 +30,9 @@ public final class Solution {
     */
     public static void roots(final int p, final int q, final int r) {
         double d = (q * q) - (2 * 2 * p * r);
-        double qua = Math.sqrt(d);
-        double r1 = ((-q + qua) / (2 * p));
-        double r2 = ((-q - qua) / (2 * p));
+        double quad = Math.sqrt(d);
+        double r1 = ((-q + quad) / (2 * p));
+        double r2 = ((-q - quad) / (2 * p));
         System.out.println(r1 + " " + r2);
     }
 }
