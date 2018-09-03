@@ -24,9 +24,9 @@ public final class Solution {
     }
     /**
     *Need to write the rootsOfQuadraticEquation function and print the output.
-    *@param p int
-    *@param q int
-    *@param r int
+    *@param p int numberOne
+    *@param q int numberTwo
+    *@param r int numberThree
     */
     public static void roots(final int p, final int q, final int r) {
         double d = (q * q) - (2 * 2 * p * r);
