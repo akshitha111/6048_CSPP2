@@ -17,10 +17,10 @@ public final class Solution {
     */
     public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
-        int a = scan.nextInt();
-        int b = scan.nextInt();
-        int c = scan.nextInt();
-        roots(a, b, c);
+        int numberOne = scan.nextInt();
+        int numberTwo = scan.nextInt();
+        int numberThree = scan.nextInt();
+        roots(numberOne, numberTwo, numberThree);
     }
     /**
     *Need to write the rootsOfQuadraticEquation function and print the output.
