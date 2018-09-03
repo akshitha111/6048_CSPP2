@@ -23,8 +23,8 @@ public final class Solution {
     }
     /**
     Need to write the gcd function and print the output.
-    *@param n1 int
-    *@param n2 int
+    *@param n1 int numberOne
+    *@param n2 int numberTwo
     *@return int
     */
     public static int gcd(final int n1, final int n2) {
