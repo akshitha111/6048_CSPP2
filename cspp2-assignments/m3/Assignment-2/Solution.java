@@ -17,8 +17,8 @@ public final class Solution {
         int n = s.nextInt();
         int count = 0;
         for (int i = 1; i <= n; i++) {
-            for (char c : String.valueOf(i).toCharArray()) {
-                if (c == '7') {
+            for (char everyChar : String.valueOf(i).toCharArray()) {
+                if (everyChar == '7') {
                     count++;
                 }
             }
