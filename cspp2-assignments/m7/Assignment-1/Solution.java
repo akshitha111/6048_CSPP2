@@ -1,3 +1,4 @@
+
 /**
  * returns true or false.
  */
@@ -57,4 +58,3 @@ final class Solution {
         System.out.println(i.validateData());
     }
 }
-
