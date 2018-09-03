@@ -15,13 +15,13 @@ Do not modify the main function.
     */
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
-        String s = sc.nextLine();
-        String reverse = reverseString(s);
+        String givenString = sc.nextLine();
+        String reverse = reverseString(givenString);
         System.out.println(reverse);
     }
     /** function.
-    * @param a String
-    * @return String
+    * @param a String a is user input
+    * @return String  returns reversed string
     */
     public static String reverseString(final String a) {
         String str = "";
