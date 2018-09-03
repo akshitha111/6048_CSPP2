@@ -19,7 +19,7 @@ public static final int N_U = 10;
          */
     }
 /**
- * { function_description }
+ * { binarytodecimal. }
  * main function.
  * @param      args  The arguments
  */
@@ -27,17 +27,17 @@ public static final int N_U = 10;
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         for (int i = 0; i < n; i++) {
-            String s = sc.next();
-            String res = binaryToDecimal(s);
+            String givenString = sc.next();
+            String res = binaryToDecimal(givenString);
             System.out.println(res);
         }
     }
     /** .
-     * { function_description }
+     * converting binary to decimal
      *
-     * @param      s     { parameter_description }
+     * @param      s     { input string}
      *
-     * @return     { description_of_the_return_value }
+     * @return    str1 { decimal output }
      */
 
     public static String binaryToDecimal(final String s) {
