@@ -6,5 +6,5 @@ Invalid Position Exception
 0
 97
 1
-Index Out of Bounds Exception
+-1
 true

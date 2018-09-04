@@ -25,6 +25,7 @@ public class List {
      * This is a hard concept to understand. Discuss with your mentor.
      *
     */
+    private int[] intList;
     
     // declare a private int[]
     // don't create the array yet using new
@@ -49,6 +50,7 @@ public class List {
      * to be accessed by the methods that are outside of the List class.
      * 
      */
+    private int size;
 
     // declare a private int size
     // again, don't initialize it here
@@ -70,6 +72,9 @@ public class List {
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
         // That is the initial value to use for size.
+        intList = new int[10];
+        size = 0;
+      
 
     }
     
@@ -84,10 +89,12 @@ public class List {
      * 
      * The method returns void (nothing)
      */
-    public static void add(int item) {
-        List.add(5);
+    public void add(int item) {
         //Inserts the specified element at the end of the list.
-    }
+        intList[size] = item;
+        size++;
+        }
+    
 
     /*
      * The size method returns the value of the size.
@@ -98,7 +105,7 @@ public class List {
      */
     public int size() {
         // replace the code below to implement the size method
-        return -1;
+        return size;
     }
 
     /*
@@ -113,7 +120,7 @@ public class List {
      * moved to the left by one position.
      * Here is an example:
      * array = [1,2,3,0,0,0,0,0,0,0]
-     * remove(2) would remove the item 2
+     * remove(1) would remove the item 2 which is at index position 1.
      * But how do you remove the item from an array?
      * Well, the way to remove it is to move all
      * the items, that are to the right of the removed item, to the left
@@ -124,6 +131,15 @@ public class List {
     public void remove(int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
+        if(index > 0 && index<size) {
+        	for(int i = index; i< size-1; i++) {
+        		intList[i] = intList[i+1];
+        	}
+        	intList[size--] = 0;
+        }
+        else {
+        	System.out.println("Invalid Position Exception");
+        }
     }
 
     /*
@@ -164,7 +180,12 @@ public class List {
      */
     public String toString() {
         // Replace the code below
-        return "print the list";
+        String temp = "[";
+        for(int i = 0; i < size - 1; i++) {
+        	temp += intList[i] + ",";
+        }
+        temp += intList[size-1] + "]";
+        return temp;
     } 
     
     /*
@@ -175,7 +196,13 @@ public class List {
      */
     public boolean contains(int item) {
         // Replace the code below
-        return true;
+        for(int i = 0; i < size; i++){
+        	if(intList[i] == item) {
+        		return true;
+        	}
+
+        }
+        return false;
     }
 
     /*
