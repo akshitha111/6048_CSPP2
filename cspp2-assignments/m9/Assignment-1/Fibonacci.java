@@ -29,14 +29,14 @@ public class Fibonacci
     public static List fib(int n) {
         // todo - complete this method
         List objList = new List(n);
-        int a = 0;
-        int b = 1;
-        int c;
-        for (int i = 0; i < n; i++) {
-            objList.add(a);
-            c = a + b;
-            a = b;
-            b = c;
+        int numberOne = 0;
+        int numberTwo = 1;
+        int nextNumber;
+        for (int i = 0; i < n+1; i++) {
+            objList.add(numberOne);
+            nextNumber = numberOne + numberTwo;
+            numberOne = numberTwo;
+            numberTwo = nextNumber;
         }
         return objList;
         
