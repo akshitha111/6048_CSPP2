@@ -28,7 +28,7 @@ public class Fibonacci {
      * Look for the hint.txt if some of the testcases fail.
      */
     /**
-     * function fib.
+     * method fib.
      *
      * @param      n     { number upto which series need to be printed. }
      *
