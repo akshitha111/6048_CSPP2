@@ -32,7 +32,7 @@ public class Fibonacci
         int numberOne = 0;
         int numberTwo = 1;
         int nextNumber;
-        for (int i = 0; i < n+1; i++) {
+        for (int i = 0; i < n; i--) {
             objList.add(numberOne);
             nextNumber = numberOne + numberTwo;
             numberOne = numberTwo;
