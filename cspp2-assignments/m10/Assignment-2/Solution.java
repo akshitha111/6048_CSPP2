@@ -4,8 +4,7 @@ import java.util.Scanner;
  * class function.
  */
 public final class Solution {
-    
-    /**
+/**
      * this is a constructor.
      */
     private Solution() {
