@@ -284,7 +284,6 @@ public class List {
         for( j = size; j<(size + items.length); j++)
         {
         list[size] = items[j];
-        j++;
         }
         size = size + items.length;
     
