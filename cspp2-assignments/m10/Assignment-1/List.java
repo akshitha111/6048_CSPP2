@@ -279,7 +279,7 @@ public class List {
     {
         if(size >= list.length)
         {
-            resize();
+            size = size * 2;
         }
         else {
         for(int i = 0; i<items.length; i++)
