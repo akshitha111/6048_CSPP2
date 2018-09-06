@@ -278,6 +278,8 @@ public class List {
     public void addAll(int items[])
     {
         if((size()+items.length)>10){
+            resize();
+        }
         for(int i = 0; i<items.length; i++)
         {
         list[size] = items[i];
@@ -285,7 +287,7 @@ public class List {
     }
     
 }  
-}
+
 
      /* 
         Inserts the specified element at the specified index 
