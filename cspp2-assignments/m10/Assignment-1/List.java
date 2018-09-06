@@ -277,18 +277,20 @@ public class List {
     array to the end of list*/
     public void addAll(int items[])
     {
-        if(size >= list.length)
+        if(list.length + items.length > 10)
         {
-            size = size * 2;
-        }
+           resize();
+           } 
         else {
         for(int i = 0; i<items.length; i++)
         {
         list[size] = items[i];
         size++;
-    }
-    }
-    }
+    
+}
+}
+    
+}
 
      /* 
         Inserts the specified element at the specified index 
