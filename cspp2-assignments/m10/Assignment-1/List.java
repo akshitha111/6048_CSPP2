@@ -280,9 +280,11 @@ public class List {
         if((size()+items.length)>10){
             resize();
         }
-        for(int i = 0; i<items.length; i++)
+        int j = 0;
+        for(int i = size; i<items.length; i++)
         {
-        list[size] = items[i];
+        list[size] = items[j];
+        j++;
         size++;
     
 }
