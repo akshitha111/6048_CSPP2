@@ -46,7 +46,7 @@ class Student {
         return this.name;
     }
 }
-/** 
+/**
 * this is main class.
 */
 public final class Solution {
@@ -54,7 +54,7 @@ public final class Solution {
     */
     private Solution() {
     }
-    /** 
+    /**
     * the method to do the operations.
     *@param stdin Scanner
     */
@@ -152,7 +152,7 @@ public final class Solution {
                 default: break;
                 }
             }
-    }   
+    }
     /** the method on char type.
     *@param stdin Scanner
     */
@@ -201,7 +201,7 @@ public final class Solution {
                 }
             }
     }
-    /**this is main method.    
+    /**this is main method.
     *@param args String
     */
     public static void main(final String[] args) {
@@ -353,4 +353,5 @@ public final class Solution {
         }
     }
 }
+
 
