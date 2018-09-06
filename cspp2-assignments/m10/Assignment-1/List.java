@@ -292,6 +292,7 @@ public class List {
          // write the logic 
         for(int i = size-1; i>= index; i--) {
             list[i+1] = list[i];
+            size++;
         }
         list[index] = item;
     }
