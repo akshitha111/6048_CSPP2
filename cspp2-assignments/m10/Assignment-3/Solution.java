@@ -201,8 +201,7 @@ public final class Solution {
                 }
             }
     }
-    /**the main method to perform the operations.
-    *on all data types.
+    /**this is main method.    
     *@param args String
     */
     public static void main(final String[] args) {
