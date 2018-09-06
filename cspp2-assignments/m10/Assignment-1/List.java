@@ -286,7 +286,6 @@ public class List {
         list[i] = items[j];
         j++;
         }
-        System.out.println(list);
         size = size + items.length;
     
 }  
