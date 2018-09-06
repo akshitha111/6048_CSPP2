@@ -123,11 +123,6 @@ public class StringList implements StringListInterface{
      * 
      * The method returns void (nothing)
      */
-    private void resize(final String item) {
-        list = Arrays.copyOf(list, size + 2);
-        list[size++] = item;
-        
-    }
     public void add(String item) {
         //Inserts the specified element at the end of the list.
        if (size < list.length + 1) {
@@ -165,6 +160,10 @@ public class StringList implements StringListInterface{
      */
     public int size() {
         return size;
+    }
+    private void resize(final String item) {
+        list = Arrays.copyOf(list, size + 2);
+        list[size++] = item;
     }
 
     /*
@@ -264,7 +263,7 @@ public class StringList implements StringListInterface{
      * the item exists and otherwise false
      */
     public boolean contains(String item) {
-        return indexOf(item) == 1;
+        return indexOf(item) == -1;
         
     }
 
@@ -273,12 +272,12 @@ public class StringList implements StringListInterface{
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
-    public int indexOf(String item) {
-         for(int i = 0; i < size; i++) {
-            if(item == list[i])
-                return i;
+   public int indexOf(final String item) {
+        int i;
+        for (i = 0; i < size; i++) {
+            if (item.equals(list[i]))
+                return -1;
         }
-        return -1;
-        
+        return i;
     }
 }
