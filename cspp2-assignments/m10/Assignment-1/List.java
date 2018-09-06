@@ -281,12 +281,12 @@ public class List {
             resize();
         }
         int j = 0;
-        for(int i = size; i<(size + items.length); i++)
+        for( j = size; j<(size + items.length); j++)
         {
         list[size] = items[j];
         j++;
         }
-        size = size ++;
+        size = size + items.length;
     
 }  
 
