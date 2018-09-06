@@ -294,12 +294,14 @@ public class List {
         if(index<0) {
             System.out.println("Negative Index Exception");
         }
+        else{
         for(int i = size; i > index; i--) {
             list[i] = list[i-1];
             }
         list[index] = item;
         size++;
     }
+}
     
     /* Returns the count of occurances of a given item in the list*/
     public int count(int item)
