@@ -286,7 +286,7 @@ public class List {
         list[size] = items[j];
         j++;
         }
-        size = size + items.length;
+        size = size ++;
     
 }  
 
