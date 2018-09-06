@@ -281,9 +281,9 @@ public class List {
             resize();
         }
         int j = 0;
-        for( j = size; j<(size + items.length); j++)
+        for(int i = size; i<(size + items.length); i++)
         {
-        list[size] = items[j];
+        list[i] = items[j];
         }
         size = size + items.length;
     
