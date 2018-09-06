@@ -44,6 +44,16 @@ public class List<E> {
     array to the end of list*/
     public void addAll(E[] items) {
         //Write logic for addAll method
+         if((size()+items.length)>10){
+            list = resize();
+        }
+        int j = 0;
+        for(int i = size; i<(size + items.length); i++)
+        {
+        list[i] = items[j];
+        j++;
+        }
+        size = size + items.length;
     }
     /*
      * The size method returns the value of the size.
@@ -75,8 +85,21 @@ public class List<E> {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
-    public void remove(int idex) {
+    private E[] resize() {
+
+        return Arrays.copyOf(list, 2*list.length);
+        
+    }
+    public void remove(int index) {
         //Write logic for remove method
+        if(index >= 0 && index < size) {
+            for(int i = index; i < size - 1; i++) {
+                list[i] = list[i + 1];
+            }
+            size--;
+        } else {
+            System.out.println("Invalid Position Exception");
+        }
     }
     /*
      * Get method has to return the items that is
@@ -91,6 +114,11 @@ public class List<E> {
      */
     public E get(int index) {
          //Write logic for get method
+        //  if(index < 0 || index >= size) 
+        //     return "-1";
+        //  else {
+        //     return list[index];
+        // }
         return list[index];
     }
     /*
@@ -114,8 +142,15 @@ public class List<E> {
      *
      */
     public String toString() {
-       
-       return "print the list";
+        if(size == 0)
+            return "[]";
+        String str = "[";
+        int i = 0;
+        for(i = 0; i < size - 1; i++) {
+            str = str + list[i] + ",";
+        }
+        str = str + list[i] + "]";
+        return str;
     }
     /*
      * Contains return true if the list has
@@ -125,7 +160,7 @@ public class List<E> {
      */
     public boolean contains(E item) {
 		//Write logic for contains method
-        return true;
+        return indexOf(item) == -1;
     }
     /*
      * Returns the index of the first occurrence 
@@ -134,6 +169,10 @@ public class List<E> {
      */
     public int indexOf(E item) {
        //Write logic for indexOf method
+        for(int i = 0; i < size; i++) {
+            if(item == list[i])
+                return i;
+        }
         return -1;
     }
 }
