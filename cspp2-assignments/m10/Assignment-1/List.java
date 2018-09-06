@@ -148,10 +148,9 @@ public class List {
 
     // todo create resize method
     private int[] resize() {
-        int length = size * 2;
-        int[] temp = new int[length];
-        temp = Arrays.copyOf(list, length);
-        return temp;
+
+     return Arrays.copyOf(list, 2*list.length);
+        
     }
 
     /*
@@ -278,7 +277,7 @@ public class List {
     public void addAll(int items[])
     {
         if((size()+items.length)>10){
-            resize();
+            list = resize();
         }
         int j = 0;
         for(int i = size; i<(size + items.length); i++)
