@@ -277,19 +277,12 @@ public class List {
     array to the end of list*/
     public void addAll(int items[])
     {
-        if(list.length + items.length > 10)
-        {
-           resize();
-           } 
-        else {
         for(int i = 0; i<items.length; i++)
         {
         list[size] = items[i];
         size++;
     
-}
-}
-    
+}  
 }
 
      /* 
