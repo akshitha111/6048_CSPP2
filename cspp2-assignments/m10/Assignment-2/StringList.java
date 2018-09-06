@@ -136,16 +136,15 @@ public class StringList implements StringListInterface{
     array to the end of list*/
    
     public void addAll(String[] items) {
-        int g = items.length;
         int in = 0;
-        if ((size + g) <= list.length) {
-            for (int j = size; j < (size + g) ; j++) {
+        if ((size + items.length) <= list.length) {
+            for (int j = size; j < (size + items.length) ; j++) {
                 list[j] = items[in];
                 in += 1;
             }
-            size += g;
+            size += items.length;
         } else {
-            for (int i = 0; i < g; i++) {
+            for (int i = 0; i < items.length; i++) {
                 resize(items[i]);
             }
         }
@@ -190,7 +189,6 @@ public class StringList implements StringListInterface{
     public void remove(int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
-        // if(index >= 0 && index < size) {
         if (index >= 0 && index < size) {
             for (int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
