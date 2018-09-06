@@ -113,7 +113,6 @@ public class List {
     public void add(int item) {
         //Inserts the specified element at the end of the zelist.
         list[size++] = item;  
-        size++; 
     }
 
     /*
