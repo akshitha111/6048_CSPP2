@@ -307,7 +307,7 @@ public class List {
                 count++;
             }
         }
-        return 0;
+        return count;
     }
 
 
