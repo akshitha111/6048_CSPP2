@@ -4,14 +4,15 @@ import java.util.Scanner;
  *A Class is implemented for Student details.
  */
 class Student {
-    /**the name is declared with private specifier.
+    /**
+    * String name.
     */
     private String name;
     /**A constructor used to initialize the instance variables.
-    *@param nameOne string
+    *@param n string
     */
-    Student(final String nameOne) {
-        this.name = nameOne;
+    Student(final String n) {
+        this.name = n;
     }
     /**
      *Getter method which returns the value of instance.
@@ -23,8 +24,8 @@ class Student {
     }
     /**
      * whether the students names are equal or not.
-     * @param      other  The other
-     * @return     { description_of_the_return_value }
+     * @param      other  boolean other
+     * @return     { boolean value }
      */
     @Override
     public boolean equals(final Object other) {
@@ -45,14 +46,16 @@ class Student {
         return this.name;
     }
 }
-/** the main class to complete the program.
+/** 
+* this is main class.
 */
 public final class Solution {
-    /**this is a constructor for the solution class.
+    /**this is a constructor.
     */
     private Solution() {
     }
-    /** the method is to do the operations on object type.
+    /** 
+    * the method to do the operations.
     *@param stdin Scanner
     */
     public static void objectMethod(final Scanner stdin) {
@@ -101,7 +104,7 @@ public final class Solution {
                 }
                 }
 }
-   /** the method is to do the operations on double type.
+   /** the double method.
     *@param stdin Scanner
     */
     public static void doubleMethod(final Scanner stdin) {
@@ -149,7 +152,8 @@ public final class Solution {
                 default: break;
                 }
             }
-    }   /** the method is to do the operations on char type.
+    }   
+    /** the method on char type.
     *@param stdin Scanner
     */
     public static void charMethod(final Scanner stdin) {
