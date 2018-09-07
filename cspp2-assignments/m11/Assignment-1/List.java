@@ -338,7 +338,7 @@ public class List {
     /**
      * compares the lists.
      *
-     * @param      olist  The list
+     * @param      listOne  The list
      *
      * @return    true or false
      */
