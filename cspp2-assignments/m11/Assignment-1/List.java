@@ -223,8 +223,11 @@ public class List {
         // write the logic 
         for(int i=0; i < newArray.length; i++) {
             for(int j = 0; j<size; j++) {
-                if(newArray[i] == list[j])
-                remove(j);
+                if(newArray[i] == list[j]) {
+                    remove(j);
+                    j--;
+
+                }
             }
         }
 
@@ -256,15 +259,15 @@ public class List {
     return null;
    }
    if(start < 0 || end < 0) {
-    System.out.println("Index Out Of Bounds Exception");
+    System.out.println("Index Out of Bounds Exception");
     return null;
    }
    if(start == end) {
-    System.out.println("Index Out Of Bounds Exception");
+    System.out.println("Index Out of Bounds Exception");
     return null;
    }
    if(start > size || end > size) {
-    System.out.println("Index Out Of Bounds Exception");
+    System.out.println("Index Out of Bounds Exception");
     return null;
    }
    List listOne = new List();
