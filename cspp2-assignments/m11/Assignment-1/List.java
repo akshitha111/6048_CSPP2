@@ -222,11 +222,10 @@ public class List {
      {
         // write the logic 
         for(int i=0; i < newArray.length; i++) {
-            for(int j = 0; j<size; j++) {
+            for(int j = 0; j < size; j++) {
                 if(newArray[i] == list[j]) {
                     remove(j);
                     j--;
-
                 }
             }
         }
