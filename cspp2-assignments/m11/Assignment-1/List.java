@@ -166,7 +166,7 @@ public class List {
     public String toString() {
         // Replace the code below
         if (size == 0) {
-            System.out.println("[]");
+            return "[]";
         } 
         int i = 0;
         String str = "[";
