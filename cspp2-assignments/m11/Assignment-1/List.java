@@ -221,6 +221,12 @@ public class List {
      public void removeAll(int[] newArray)
      {
         // write the logic 
+        for(int i=0; i < newArray.length; i++) {
+            for(int j = 0; j<size; j++) {
+                if(newArray[i] == list[j])
+                remove(j);
+            }
+        }
 
      }
     /*
@@ -230,21 +236,38 @@ public class List {
     "Index Out of Bounds Exception" if any of values start and end are negative
     and also if start is greater than end.
     */
+    /*
+    Return null and print "Index Out of Bounds Exception" if
+    start and end parameters are invalid
+    eg: [3, 2] start is greater than the end
+        [-3, -4] start and end are negative
+        If List has one Element
+        [1, 3] is Out of Bounds, as size is One
+        Given an empty list
+        [0, 0] is Out of Bounds, as size is zero
+    Caution: If size > 0 and start and end are equal then
+    sublist is empty
+    */
     public List subList(int start, int end) 
     {
     // write the logic for subList
-    //if( start < 0 || end > size || start > end) 
-    //  return null;
-    
-    
-    //System.out.println("Index Out Of Bounds Exception");
-    //else {
-        //for (int i = start; i < end; i++) {
-            //System.out.println(list[i]);
-        
-    
-
-    return new List();
+   if(start > end) {
+    System.out.println("Index Out of Bounds Exception");
+   }
+   if(start < 0 || end < 0) {
+    System.out.println("Index Out Of Bounds Exception");
+   }
+   if(start == end) {
+    System.out.println("Index Out Of Bounds Exception");
+   }
+   if(start > size || end > size) {
+    System.out.println("Index Out Of Bounds Exception");
+   }
+   List resultList = new List();
+   for (int i = start; i < end; i++) {
+    resultList.add(list[i]);
+   }
+   return resultList;
     }
     /*
     Returns a boolean indicating whether the parameter i.e a List object is
@@ -254,29 +277,24 @@ public class List {
     {
     // Replace the code below
     int count = 0;
-    //int b = listOne.length;
     int i = 0;
     while(i < size) {
         for (int j = 0; j < size; j++) {
             if (list[i] == (listOne.get(j))) {
                 count += 1;
-                i++;
-            } 
+                }
+            }
+            i++;
         }
 
-          if(count == size) {
-                return true;
+          if(count != size) {
+                return false;
             }
-        }
-        return false;
+        return true;
     
 }
-
-    
-
-    //return true;
-    
-    /*
+//return this.toString().equals(listOne.toString());
+   /*
     * Removes all the elements from list
     * Think about this case and make the method
     * the simpler.
@@ -284,7 +302,7 @@ public class List {
     public void clear()
     {
     // write the logic for clear.
-        int size = 0;
+         size = 0;
 
     }
 
