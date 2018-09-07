@@ -342,17 +342,9 @@ public class List {
      *
      * @return    true or false
      */
-    public boolean equals(final List olist) {
+    public boolean equals(final List listOne) {
     // Replace the code below
-    if (size != olist.size) {
-        return false;
-    }
-    for (int i = 0; i < size; i++) {
-            if (this.list[i] != olist.list[i]) {
-                return false;
-            }
-        }
-        return true;
+    return this.toString().equals(listOne.toString());
     }
     /*
     * Removes all the elements from list
