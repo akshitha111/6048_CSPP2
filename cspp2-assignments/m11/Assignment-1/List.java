@@ -87,7 +87,7 @@ public class List {
      */
     public void add(int item) {
         //Inserts the specified element at the end of the list.
-        if (size > 10)
+        if (size == list.length)
         	list = resize();
         list[size++] = item;
     }
@@ -251,10 +251,26 @@ public class List {
     Returns a boolean indicating whether the parameter i.e a List object is
     exactly matching with the given list or not.
     */
-    public boolean equals(List list ) 
+    public boolean equals(List listOne ) 
     {
     // Replace the code below
-    return true;
+    int count = 0;
+    //int b = listOne.length;
+    for (int i = 0; i < size; ) {
+    	for (int j = 0; j < size; j++) {
+    		if (list[i] == (listOne.get(j))){
+    			count += 1;
+    			i++;
+    		} 
+    	}
+    }
+    		if(count == size) {
+    			return true;
+    		}
+    	return false;
+    
+
+    //return true;
     }
     /*
     * Removes all the elements from list
