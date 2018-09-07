@@ -72,9 +72,12 @@ public class List {
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
         // That is the initial value to use for size.
-        int list[] = new int[10];
+        int list[] = new int[50];
         int size = 0;
 
+    }
+    private int[] resize() {
+    	return Arrays.copyOf(list, 2 * list.length);
     }
     
     /*
@@ -88,12 +91,10 @@ public class List {
     public void add(int item) {
         //Inserts the specified element at the end of the list.
         if (size == list.length)
-        	list = resize();
+        list = resize();
         list[size++] = item;
     }
-    private int[] resize() {
-    	return Arrays.copyOf(list, 2 * list.length);
-    }
+    
 
     /*
      * The size method returns the value of the size. The purpose of the method
@@ -145,7 +146,7 @@ public class List {
      */
     public int get(int index) {
         // Replace the code below to write the code for get
-        if (index < 0 || index > size) {
+        if (index < 0 || index >= size) {
         	return -1;
         }
         return list[index];
@@ -209,7 +210,7 @@ public class List {
         }
         int j = 0;
         for (int i = size; i < (size + newArray.length); i++) {
-        	list[i] = list[j];
+        	list[i] = newArray[j];
         	j++;
         }
         size = size + newArray.length;
@@ -234,16 +235,16 @@ public class List {
     public List subList(int start, int end) 
     {
     // write the logic for subList
-    if( start < 0 || end > size || start > end) 
-    	return null;
+    //if( start < 0 || end > size || start > end) 
+    //	return null;
     
     
     //System.out.println("Index Out Of Bounds Exception");
-    else {
-    	for (int i = start; i < end; i++) {
-    		System.out.println(list[i]);
-    	}
-    }
+    //else {
+    	//for (int i = start; i < end; i++) {
+    		//System.out.println(list[i]);
+    	
+    
 
     return new List();
     }
@@ -256,15 +257,16 @@ public class List {
     // Replace the code below
     int count = 0;
     //int b = listOne.length;
-    for (int i = 0; i < size; ) {
+    int i = 0;
+    while(i < size) {
     	for (int j = 0; j < size; j++) {
     		if (list[i] == (listOne.get(j))){
     			count += 1;
     			i++;
     		} 
     	}
-    }
-    		if(count == size) {
+
+    }  		if(count == size) {
     			return true;
     		}
     	return false;
@@ -280,6 +282,7 @@ public class List {
     public void clear()
     {
     // write the logic for clear.
+    	int size = 0;
 
     }
 
