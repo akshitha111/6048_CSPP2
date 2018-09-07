@@ -71,7 +71,8 @@ public class List {
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
         // That is the initial value to use for size.
-        list = new int[50];
+        final int ten = 10;
+        list = new int[10];
         size = 0;
 
     }
@@ -282,7 +283,7 @@ public class List {
     public boolean equals(List listOne ) 
     {
     // Replace the code below
-/*    int count = 0;
+   int count = 0;
     int i = 0;
     while(i < size) {
         for (int j = 0; j < listOne.list.length; j++) {
@@ -296,8 +297,8 @@ public class List {
           if(count != size) {
                 return false;
             }
-        return true;*/
-        return this.toString().equals(listOne.toString());
+        return true;
+        //return this.toString().equals(listOne.toString());
     
 }
 //return this.toString().equals(listOne.toString());
