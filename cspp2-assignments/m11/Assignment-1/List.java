@@ -26,8 +26,7 @@ public class List {
      * This is a hard concept to understand. Discuss with your mentor.
      *
     */
-    private int[] list;
-    
+    private int[] list;    
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
@@ -49,7 +48,7 @@ public class List {
      * So, to keep track of the size we need a variable called size
      * Again, we use private as we don't want that size variable
      * to be accessed by the methods that are outside of the List class.
-     * 
+     *
      */
     private int size;
 
@@ -72,14 +71,13 @@ public class List {
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
         // That is the initial value to use for size.
-        int list[] = new int[50];
-        int size = 0;
+        list = new int[50];
+        size = 0;
 
     }
     private int[] resize() {
-    	return Arrays.copyOf(list, 2 * list.length);
+        return Arrays.copyOf(list, 2 * list.length);
     }
-    
     /*
      * The add method does what the name suggests. Add an int item to the list.
      * The assumption is to store the item at the end of the list What is the
@@ -126,12 +124,12 @@ public class List {
         // write the logic for remove here. Think about what to do to the size
         // variable.
         if (index >= 0 && index < size) {
-        	for (int i = index; i < size - 1; i++) {
-        		list[i] = list[i+1];
-        	}
-        	size--;
+            for (int i = index; i < size - 1; i++) {
+                list[i] = list[i+1];
+            }
+            size--;
         } else {
-        	System.out.println("Invalid Position Exception");
+            System.out.println("Invalid Position Exception");
         }
     }
 
@@ -147,7 +145,7 @@ public class List {
     public int get(int index) {
         // Replace the code below to write the code for get
         if (index < 0 || index >= size) {
-        	return -1;
+            return -1;
         }
         return list[index];
     }
@@ -168,12 +166,12 @@ public class List {
     public String toString() {
         // Replace the code below
         if (size == 0) {
-        	System.out.println("[]");
+            System.out.println("[]");
         } 
         int i = 0;
         String str = "[";
         for (i = 0; i < size - 1; i++) {
-        	str = str + list[i] + ",";
+            str = str + list[i] + ",";
         }
         str = str + list[i] + "]";
         return str;        
@@ -194,8 +192,8 @@ public class List {
     public int indexOf(int item) {
         // Replace the code below
         for ( int i = 0; i < size; i++) {
-        	if (list[i] == item)
-        		return i;
+            if (list[i] == item)
+                return i;
         }
         return -1;
     }
@@ -206,12 +204,12 @@ public class List {
     {
         // write the logic
         if ( size() + newArray.length > 10) {
-        	list = resize();
+            list = resize();
         }
         int j = 0;
         for (int i = size; i < (size + newArray.length); i++) {
-        	list[i] = newArray[j];
-        	j++;
+            list[i] = newArray[j];
+            j++;
         }
         size = size + newArray.length;
 
@@ -236,14 +234,14 @@ public class List {
     {
     // write the logic for subList
     //if( start < 0 || end > size || start > end) 
-    //	return null;
+    //  return null;
     
     
     //System.out.println("Index Out Of Bounds Exception");
     //else {
-    	//for (int i = start; i < end; i++) {
-    		//System.out.println(list[i]);
-    	
+        //for (int i = start; i < end; i++) {
+            //System.out.println(list[i]);
+        
     
 
     return new List();
@@ -259,21 +257,25 @@ public class List {
     //int b = listOne.length;
     int i = 0;
     while(i < size) {
-    	for (int j = 0; j < size; j++) {
-    		if (list[i] == (listOne.get(j))){
-    			count += 1;
-    			i++;
-    		} 
-    	}
+        for (int j = 0; j < size; j++) {
+            if (list[i] == (listOne.get(j))) {
+                count += 1;
+                i++;
+            } 
+        }
 
-    }  		if(count == size) {
-    			return true;
-    		}
-    	return false;
+          if(count == size) {
+                return true;
+            }
+        }
+        return false;
+    
+}
+
     
 
     //return true;
-    }
+    
     /*
     * Removes all the elements from list
     * Think about this case and make the method
@@ -282,7 +284,7 @@ public class List {
     public void clear()
     {
     // write the logic for clear.
-    	int size = 0;
+        int size = 0;
 
     }
 
@@ -342,7 +344,7 @@ public class List {
                         String[] t1 = tokens[1].split(",");
                         int[] temp = new int[t1.length];
                         for(int i = 0; i < temp.length; i++) {
-                            temp[i]=Integer.parseInt(t1[i]);
+                            temp[i] = Integer.parseInt(t1[i]);
                         }
                         l.addAll(temp);
                     }
@@ -351,25 +353,28 @@ public class List {
                     if (tokens.length == 2) {
                         String[] t2 = tokens[1].split(",");
                         int[] a = new int[t2.length];
-                        for(int i = 0; i < t2.length; i++)
+                        for (int i = 0; i < t2.length; i++)
                             a[i] = Integer.parseInt(t2[i]);
                         l.removeAll(a);
                     }
                 break;
                 case "subList": {
-                    if (tokens.length != 2) break;
+                    if (tokens.length != 2) {
+                     break;
+                 }
                     String[] arrstring3 = tokens[1].split(",");
                     List object = l.subList(Integer.parseInt(arrstring3[0]),
                             Integer.parseInt(arrstring3[1]));
-                    if (object != null) 
+                    if (object != null) {
                         System.out.println(object);
+                    }
                     break;
                 }
                 case "equals":
                     if (tokens.length == 2) {
                         String[] lt = tokens[1].split(",");
                         List l2 = new List();
-                        for (int k = 0; k < lt.length; k++ ) {
+                        for (int k = 0; k < lt.length; k++) {
                             l2.add(Integer.parseInt(lt[k]));
                         }
                         System.out.println(l.equals(l2));
