@@ -276,7 +276,7 @@ public class List {
     public boolean equals(List listOne ) 
     {
     // Replace the code below
-    int count = 0;
+/*    int count = 0;
     int i = 0;
     while(i < size) {
         for (int j = 0; j < listOne.list.length; j++) {
@@ -290,7 +290,8 @@ public class List {
           if(count != size) {
                 return false;
             }
-        return true;
+        return true;*/
+        return this.toString().equals(listOne.toString());
     
 }
 //return this.toString().equals(listOne.toString());
