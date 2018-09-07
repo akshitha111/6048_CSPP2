@@ -99,7 +99,7 @@ public class List {
     /**
      * Constructs the object.
      *
-     * @param      capacity  The capacity
+     * @param      capacity  int capacity
      */
     public List(final int capacity) {
         size = 0;
@@ -154,7 +154,7 @@ public class List {
     /**
      * remove element from list through index.
      *
-     * @param      index  The index
+     * @param      index  int index
      */
     public void remove(final int index) {
         // write the logic for remove here. Think about what to do to the size
@@ -185,7 +185,6 @@ public class List {
      * @param      index  The index
      *
      * @return    element of that index
-     * if present else -1.
      */
     public int get(final int index) {
         // Replace the code below to write the code for get
@@ -212,7 +211,7 @@ public class List {
     /**
      * Returns a string representation of the object.
      *
-     * @return     String representation of the object.
+     * @return     String.
      */
     public String toString() {
         // Replace the code below
@@ -233,7 +232,7 @@ public class List {
      * exists and otherwise false
      */
     /**
-     *checks for a n element in the list.
+     *checks for a item in the list.
      *
      * @param      item  The item
      *
@@ -248,7 +247,7 @@ public class List {
      * this list, or -1 if this list does not contain the element.
      */
     /**
-     * Searches for the first match.
+     * Searches for the element.
      *
      * @param      item  The item
      *
@@ -268,7 +267,7 @@ public class List {
     */
 
     /**
-     * Adds all.
+     * adds all the elements.
      *
      * @param      newArray  The items
      */
