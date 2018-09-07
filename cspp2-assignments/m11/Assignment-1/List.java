@@ -263,11 +263,11 @@ public class List {
    if(start > size || end > size) {
     System.out.println("Index Out Of Bounds Exception");
    }
-   List resultList = new List();
+   List listOne = new List();
    for (int i = start; i < end; i++) {
-    resultList.add(list[i]);
+    listOne.add(list[i]);
    }
-   return resultList;
+   return listOne;
     }
     /*
     Returns a boolean indicating whether the parameter i.e a List object is
@@ -279,7 +279,7 @@ public class List {
     int count = 0;
     int i = 0;
     while(i < size) {
-        for (int j = 0; j < size; j++) {
+        for (int j = 0; j < listOne.list.length; j++) {
             if (list[i] == (listOne.get(j))) {
                 count += 1;
                 }
