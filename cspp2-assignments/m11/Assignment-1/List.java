@@ -310,6 +310,7 @@ public class List {
     public void clear()
     {
     // write the logic for clear.
+        list = new int[10];
          size = 0;
 
     }
