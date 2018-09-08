@@ -57,7 +57,8 @@ class Set {
                     if(item[j] == set[i]){
                         break;
                     }else{
-                        set[size++] = item[i];
+                        set[size] = item[i];
+                        size++;
                     }
                 }
             }
