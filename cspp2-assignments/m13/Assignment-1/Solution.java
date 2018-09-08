@@ -58,6 +58,7 @@ class Set {
                         break;
                     }else{
                         set[size] = item[i];
+                        System.out.println("hi");
 
                     }
                     size++;
