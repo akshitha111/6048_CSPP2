@@ -51,29 +51,17 @@ class Set {
             resize();
         }
             }
-            public void add(int item[]) {
-            //for(int i=0;i<size-1;i++) {
-              //  for(int j=0;j<item.length-1;j++) {
-                //    while(set[i]!=item[j]){
-                  //      set[size++]=(item[j]);
-                    //}
-                //}
-            //}
-            
+            public void add(int item[]) {            
             if(size + item.length > set.length){
-               resize();
-               
+               resize();               
             for(int i = 0;i<item.length;i++){
                 while(!contains(item[i])){
+                    System.out.println("hi");
                 set[size++] = item[i];
 
             }
         }
-            //if (size+items.length>set.length) {
-            //resize();
-        //}
             
-
             }
         }
         
