@@ -158,11 +158,13 @@ public final class Solution {
                 int[] intArray = intArray(tokens[1]);
                 if (intArray.length == 1) {
                     s.add(intArray[0]);}
-                /*} else {
+                 else {
                     s.add(intArray);
                 }
                 break;
-                case "intersection":
+            
+
+                /*case "intersection":
                 s = new Set();
                 Set t = new Set();
                 intArray = intArray(tokens[1]);
@@ -193,3 +195,4 @@ public final class Solution {
         }
     }
 }
+
