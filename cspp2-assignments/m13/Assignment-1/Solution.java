@@ -43,9 +43,9 @@ class Set {
         return size;
     }
     /**
-     * { function_description }.
+     * { boolean  }.
      *
-     * @param      item  The item.
+     * @param      item  int item.
      *
      * @return     { description_of_the_return_value }.
      */
@@ -74,7 +74,7 @@ class Set {
         return str;
             }
             /**
-             * { function_description }.
+             * { add }.
              *
              * @param      item  The item
              */
@@ -88,7 +88,7 @@ class Set {
         }
             }
             /**
-             * { function_description }.
+             * { add all }.
              *
              * @param      item  The item
              */
