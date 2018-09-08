@@ -59,18 +59,23 @@ class Set {
                     //}
                 //}
             //}
+            
             if(size + item.length > set.length){
                resize();
-            }for(int i = 0;i<item.length;i++){
+               
+            for(int i = 0;i<item.length;i++){
+                while(!contains(item[i])){
                 set[size++] = item[i];
 
             }
+        }
             //if (size+items.length>set.length) {
             //resize();
         //}
             
 
             }
+        }
         
         public void intersection(int set[]) {
            // Set temp = new Set[10];
