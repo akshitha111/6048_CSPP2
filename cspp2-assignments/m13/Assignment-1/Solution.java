@@ -4,34 +4,65 @@ import java.util.Arrays;
 
 /**
  * Class for set.
- * @author : 
+ * @author : akshitha
  */
 class Set {
     //your code goes here...
     //Good luck :-)
+    /**
+    * magic number.
+    */
+    private final int b = 10;
+    /**
+     * { set }.
+     */
     private int[] set;
+    /**
+     * { size }.
+     */
     private int size;
-    public Set() {
-        set = new int[10];
+    /**
+     * Constructs the object.
+     */
+    Set() {
+        set = new int[b];
         size = 0;
     }
+    /**
+     * { resize }.
+     */
     public void resize() {
        set =  Arrays.copyOf(set, 2 * size);
    }
-
-    //}
+   /**
+    * { function_description }.
+    *
+    * @return     { description_of_the_return_value }.
+    */
     public int size() {
         return size;
     }
-    public boolean contains(int item) {
-        for (int i=0; i<size;i++) {
-            if(set[i]==(item)) {
+    /**
+     * { function_description }.
+     *
+     * @param      item  The item.
+     *
+     * @return     { description_of_the_return_value }.
+     */
+    public boolean contains(final int item) {
+        for (int i = 0; i < size; i++) {
+            if (set[i] == (item)) {
                 return true;
             }
-        }return false;
+        }  return false;
     }
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
             public String toString() {
-                if(size == 0){
+                if (size == 0) {
                     return "{}";
                 }
                 String str = "{";
@@ -42,43 +73,46 @@ class Set {
         str = str + set[size - 1] + "}";
         return str;
             }
+            /**
+             * { function_description }.
+             *
+             * @param      item  The item
+             */
 
 
-            public void add(int item) {
+            public void add(final int item) {
                 if (!contains(item)) {
             set[size++] = item;
         } else {
             resize();
         }
             }
-            public void add(int item[]) {            
-            if(size + item.length > set.length){
-               resize(); 
-               }              
-            for(int i = 0;i<item.length;i++){
-                if(!contains(item[i])){
+            /**
+             * { function_description }.
+             *
+             * @param      item  The item
+             */
+            public void add(final int[] item) {
+                if (size + item.length > set.length) {
+               resize();
+               }
+            for (int i = 0; i < item.length; i++) {
+                if (!contains(item[i])) {
                 set[size++] = item[i];
 
             }
         }
-            
             }
-        
-       
     /*public Set intersection(int t) {
          t = new Set[10];
-        return t;     
+        return t;
         }
-
-        
         public Set retainAll(Set s ) {
             return s;
-            
             for(int i=0; i<size;i++) {
                 for(int j=0;j<items.length;j++) {
                     if(set[i] == items[j]) {
                         System.out.println(set[i]);
-        
                     }
                 }
 
@@ -89,9 +123,6 @@ class Set {
 
     }*/
 }
-
-    
-
 /**
  * Solution class for code-eval.
  */
@@ -151,13 +182,11 @@ public final class Solution {
                 case "add":
                 int[] intArray = intArray(tokens[1]);
                 if (intArray.length == 1) {
-                    s.add(intArray[0]);}
-                 else {
+                    s.add(intArray[0]);
+                } else {
                     s.add(intArray);
                 }
                 break;
-            
-
                 /*case "intersection":
                 s = new Set();
                 Set t = new Set();
@@ -189,4 +218,5 @@ public final class Solution {
         }
     }
 }
+
 
