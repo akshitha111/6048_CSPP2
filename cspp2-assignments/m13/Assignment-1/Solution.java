@@ -37,7 +37,7 @@ class Set {
                 String str = "{";
                 int i = 0;
         for (i = 0; i < size - 1; i++) {
-            str = str + set[i] + ",";
+            str = str + set[i] + ", ";
         }
         str = str + set[size - 1] + "}";
         return str;
@@ -45,7 +45,7 @@ class Set {
 
 
             public void add(int item) {
-                if (size < set.length + 1) {
+                if (!contains(item)) {
             set[size++] = item;
         } else {
             resize();
@@ -54,14 +54,9 @@ class Set {
             public void add(int item[]) {
             for(int i=0;i<size-1;i++) {
                 for(int j=0;j<item.length-1;j++) {
-                    if(item[j] == set[i]){
-                        break;
-                    }else{
-                        set[size] = item[i];
-                        System.out.println("hi");
-
+                    while(set[i]!=item[j]){
+                        set[size++]=(item[i]);
                     }
-                    size++;
                 }
             }
             if (size == set.length) {
@@ -92,6 +87,7 @@ class Set {
 
             }
         }
+       // public int[][] 
     }
 
     
