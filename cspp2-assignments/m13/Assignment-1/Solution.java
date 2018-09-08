@@ -55,8 +55,7 @@ class Set {
             if(size + item.length > set.length){
                resize();               
             for(int i = 0;i<item.length;i++){
-                while(!contains(item[i])){
-                    System.out.println("hi");
+                if(!contains(item[i])){
                 set[size++] = item[i];
 
             }
