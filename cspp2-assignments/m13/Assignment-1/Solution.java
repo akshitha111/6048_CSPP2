@@ -64,18 +64,16 @@ class Set {
             
             }
         
-        
-        public void intersection(int set[]) {
-           // Set temp = new Set[10];
-            for(int i=0; i<set.length; i++) {
-                for(int j=0; j<set.length;j++) {
-                    if(set[j] == set[i]) {
-                        System.out.println(set[j]); 
-                    }
-                }
-            }
+       
+    /*public Set intersection(int t) {
+         t = new Set[10];
+        return t;     
         }
-        public void retainAll(int[] items ) {
+
+        
+        public Set retainAll(Set s ) {
+            return s;
+            
             for(int i=0; i<size;i++) {
                 for(int j=0;j<items.length;j++) {
                     if(set[i] == items[j]) {
@@ -86,8 +84,11 @@ class Set {
 
             }
         }
-       // public int[][] 
-    }
+       public Set cartesianProduct(Set s){
+        return s;
+
+    }*/
+}
 
     
 
@@ -181,7 +182,8 @@ public final class Solution {
                 intArray = intArray(tokens[2]);
                 t.add(intArray);
                 System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
-                break;*/
+                break;
+                */
                 default:
                 break;
             }
