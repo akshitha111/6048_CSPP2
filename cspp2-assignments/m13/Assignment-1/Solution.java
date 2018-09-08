@@ -58,8 +58,9 @@ class Set {
                         break;
                     }else{
                         set[size] = item[i];
-                        size++;
+
                     }
+                    size++;
                 }
             }
             if (size == set.length) {
