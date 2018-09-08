@@ -61,7 +61,7 @@ class Set {
             //}
             if(size + item.length > set.length){
                resize();
-            }for(int i = size;i<item.length;i++){
+            }for(int i = 0;i<item.length;i++){
                 set[size++] = item[i];
 
             }
