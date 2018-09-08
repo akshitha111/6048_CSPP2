@@ -45,25 +45,31 @@ class Set {
 
 
             public void add(int item) {
-                if(size==set.length) {
-                 resize();
-                } else{
-                set[size++] = item;
+                if (size < set.length + 1) {
+            set[size++] = item;
+        } else {
+            resize();
+        }
             }
+            public void add(int item[]) {
+            for(int i=0;i<size-1;i++) {
+                for(int j=0;j<item.length-1;j++) {
+                    if(item[j] == set[i]){
+                        break;
+                    }else{
+                        set[size++] = item[i];
+                    }
+                }
             }
-            /*public void add(int item[]) {
-            for (int i = 0; i < item.length; i++) {
-            set[size] = item[i];
-            size++;
             if (size == set.length) {
             resize();
         }
             
 
             }
-        }
+        
         public void intersection(int set[]) {
-            set temp = new set[10];
+           // Set temp = new Set[10];
             for(int i=0; i<set.length; i++) {
                 for(int j=0; j<set.length;j++) {
                     if(set[j] == set[i]) {
@@ -83,8 +89,8 @@ class Set {
 
             }
         }
-    }*/
-}
+    }
+
     
 
 /**
