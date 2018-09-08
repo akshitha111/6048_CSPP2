@@ -53,7 +53,8 @@ class Set {
             }
             public void add(int item[]) {            
             if(size + item.length > set.length){
-               resize();               
+               resize(); 
+               }              
             for(int i = 0;i<item.length;i++){
                 if(!contains(item[i])){
                 set[size++] = item[i];
@@ -62,7 +63,7 @@ class Set {
         }
             
             }
-        }
+        
         
         public void intersection(int set[]) {
            // Set temp = new Set[10];
