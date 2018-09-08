@@ -55,7 +55,7 @@ class Set {
             for(int i=0;i<size-1;i++) {
                 for(int j=0;j<item.length-1;j++) {
                     while(set[i]!=item[j]){
-                        set[size++]=(item[i]);
+                        set[size++]=(item[j]);
                     }
                 }
             }
