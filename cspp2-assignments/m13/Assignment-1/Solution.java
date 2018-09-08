@@ -35,12 +35,15 @@ class Set {
                     return "{}";
                 }
                 String str = "{";
-                for(int i = 0;i<size;i++) {
-                    str += set[i]; 
-                }
-                str = "}";
-                return str;
+                int i = 0;
+        for (i = 0; i < size - 1; i++) {
+            str = str + set[i] + ",";
+        }
+        str = str + set[size - 1] + "}";
+        return str;
             }
+
+
             public void add(int item) {
                 if(size==set.length) {
                  resize();
