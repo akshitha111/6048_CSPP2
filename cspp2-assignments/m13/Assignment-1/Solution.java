@@ -52,16 +52,22 @@ class Set {
         }
             }
             public void add(int item[]) {
-            for(int i=0;i<size-1;i++) {
-                for(int j=0;j<item.length-1;j++) {
-                    while(set[i]!=item[j]){
-                        set[size++]=(item[j]);
-                    }
-                }
+            //for(int i=0;i<size-1;i++) {
+              //  for(int j=0;j<item.length-1;j++) {
+                //    while(set[i]!=item[j]){
+                  //      set[size++]=(item[j]);
+                    //}
+                //}
+            //}
+            if(size + item.length > set.length){
+               resize();
+            }for(int i = size;i<item.length;i++){
+                set[size++] = item[i];
+
             }
-            if (size == set.length) {
-            resize();
-        }
+            //if (size+items.length>set.length) {
+            //resize();
+        //}
             
 
             }
