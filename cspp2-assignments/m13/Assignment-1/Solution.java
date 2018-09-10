@@ -108,7 +108,7 @@ class Set {
      public Set intersection(Set other) {
         Set result = new Set();
         for (int i = 0; i < this.size; i++) {
-            if (other.contains(this.get(i))) {
+            if (this.contains(other.get(i))) {
                 result.add(this.get(i));
             }
         }
