@@ -2,13 +2,13 @@ import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
 /**
- * Class for sorted set.
+ *  sorted set class.
  */
 class SortedSet extends Set {
     /**
      * sort function.
      *
-     * @param      array  The array
+     * @param      array  int array
      */
     public void sort(final int[] array) {
         int temp;
@@ -23,9 +23,9 @@ class SortedSet extends Set {
         }
     }
     /**
-     * add function.
+     * add the item function.
      *
-     * @param      item  The item
+     * @param      item  int item
      */
     public void add(final int item) {
         if (!contains(item)) {
@@ -34,7 +34,7 @@ class SortedSet extends Set {
         sort(set);
     }
     /**
-     * subset.
+     * returns subset.
      *
      * @param      start  The start
      * @param      end    The end
@@ -61,9 +61,9 @@ class SortedSet extends Set {
         return Arrays.copyOf(result, k);
     }
     /**
-     * headset function.
+     * The headset function.
      *
-     * @param      end   The end
+     * @param      end   int end
      *
      * @return     returms elements.
      */
@@ -79,7 +79,7 @@ class SortedSet extends Set {
         return Arrays.copyOf(result, temp);
     }
     /**
-     * last function.
+     * The last function.
      *
      * @return     returns list of elements.
      */
@@ -93,7 +93,7 @@ class SortedSet extends Set {
     /**
      * Adds all.
      *
-     * @param      element  The element
+     * @param      element  int[] element
      */
     public void addAll(final int[] element) {
         for (int i : element) {
@@ -102,7 +102,7 @@ class SortedSet extends Set {
     }
 }
 /**
- * Solution class.
+ * This is a Solution class.
  */
 public final class Solution {
     /**
