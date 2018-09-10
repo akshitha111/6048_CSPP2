@@ -1,6 +1,7 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
+import java.util.*;
 
 /**
  * Class for set.
@@ -85,8 +86,9 @@ class Set {
             set[size++] = item;
         } else {
             resize();
-        }
+        
             }
+        }
             /**
              * { add all }.
              *
@@ -103,26 +105,51 @@ class Set {
             }
         }
             }
-    /*public Set intersection(int t) {
-         t = new Set[10];
-        return t;
-        }
-        public Set retainAll(Set s ) {
-            return s;
-            for(int i=0; i<size;i++) {
-                for(int j=0;j<items.length;j++) {
-                    if(set[i] == items[j]) {
-                        System.out.println(set[i]);
-                    }
-                }
-
+     public Set intersection(Set other) {
+        Set result = new Set();
+        for (int i = 0; i < this.size; i++) {
+            if (other.contains(this.get(i))) {
+                result.add(this.get(i));
             }
         }
-       public Set cartesianProduct(Set s){
-        return s;
+        return result;
+    }
+        public Set retainAll(int[] arr) {
+            Set other = new Set();
+            for (int item : arr) {
+                other.add(item);
+            } return intersection(other);
+                    
+                }
+        public int get(int index) {
+            if(index < 0 || index > size) {
+                return -1;
+            }
+            else {
+                return set[index];
+            }
 
-    }*/
-}
+        }
+
+            
+        
+       public int[][] cartesianProduct(Set other){
+        int[][] result = new int[this.size() * other.size()][2];
+        if (this.size() == 0 || other.size() == 0) {
+            return null;
+        }
+        int k = -1;
+        for (int i = 0; i < this.size(); i++) {
+            for (int j = 0; j < other.size(); j++) {
+                result[++k][0] = this.get(i);
+                result[k][1] = other.get(j);
+            }
+        }return result;
+    }
+        }
+
+    
+
 /**
  * Solution class for code-eval.
  */
@@ -187,7 +214,7 @@ public final class Solution {
                     s.add(intArray);
                 }
                 break;
-                /*case "intersection":
+                case "intersection":
                 s = new Set();
                 Set t = new Set();
                 intArray = intArray(tokens[1]);
@@ -211,13 +238,15 @@ public final class Solution {
                 intArray = intArray(tokens[2]);
                 t.add(intArray);
                 System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
-                break;*/
+                break;
                 default:
                 break;
             }
         }
+
     }
 }
+    
 
 
 
