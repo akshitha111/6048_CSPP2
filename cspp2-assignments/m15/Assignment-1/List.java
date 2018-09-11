@@ -162,18 +162,20 @@ public class List extends Exception{
         // write the logic for remove here. Think about what to do to the size
         // variable.
         try {
-        //if (index >= 0 && index < size) {
-            for (int i = index; i < size - 1; i++) {
+            //if (index >= 0 && index < size) {
+                for (int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
-            list[size] = 0;
+            list[list.length - 1] = 0;
             size--;
          
+        
     }
-    catch(Exception e){
+        catch(Exception e){
             System.out.println("Invalid Position Exception");
         }
-    }
+    
+}
 
     /*
      * Get method has to return the items that is at the index position passed
