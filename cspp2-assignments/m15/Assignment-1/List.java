@@ -6,7 +6,7 @@ import java.util.Arrays;
 *class list.
 *
 */
-public class List {
+public class List extends Exception{
     //Implement all the methods mentioned to build a ListADT
 
     /*
@@ -346,24 +346,23 @@ public class List {
      *
      * @return     sublist
      */
-    public List subList(final int start, final int end) {
+    public List subList (final int start, final int end)throws Exception {
     // write the logic for subList
-   
     if (start > end) {
-    System.out.println("Index Out of Bounds Exception");
-    return null;
+    throw new Exception("Index Out of Bounds Exception");
+    //return null;
    }
    if (start < 0 || end < 0) {
-    System.out.println("Index Out of Bounds Exception");
-    return null;
+    throw new Exception("Index Out of Bounds Exception");
+    //return null;
    }
    if (start == end) {
-    System.out.println("Index Out of Bounds Exception");
-    return null;
+    throw new Exception("Index Out of Bounds Exception");
+    //return null;
    }
    if (start > size || end > size) {
-    System.out.println("Index Out of Bounds Exception");
-    return null;
+    throw new Exception("Index Out of Bounds Exception");
+    //return null;
    }
    List listOne = new List();
    for (int i = start; i < end; i++) {
@@ -479,6 +478,7 @@ public class List {
                     }
                 break;
                 case "subList":
+                try {
                     if (tokens.length != 2) {
                         break;
                     }
@@ -488,7 +488,12 @@ public class List {
                     if (object != null) {
                         System.out.println(object);
                     }
-                    break;
+                }
+                catch(Exception e) {
+                    System.out.println(e.getMessage());
+                    
+                }
+                break;
                 case "equals":
                     if (tokens.length == 2) {
                         String[] lt = tokens[1].split(",");
