@@ -6,8 +6,13 @@ import java.util.Arrays;
 *class list.
 *
 */
+class MyException extends Exception {
+    public MyException(String s) {
+        super(s);
+    }
+}
 
-public class List extends Exception{
+public class List {
     //Implement all the methods mentioned to build a ListADT
 
     /*
@@ -162,20 +167,25 @@ public class List extends Exception{
         // write the logic for remove here. Think about what to do to the size
         // variable.
         try {
-            //if (index >= 0 && index < size) {
+            if (index >= 0 && index < size) {
                 for (int i = index; i < size - 1; i++) {
-                list[i] = list[i + 1];
+                    list[i] = list[i + 1];
+                }
+                list[list.length - 1] = 0;
+                size--;
             }
-            list[list.length - 1] = 0;
-            size--;
-         
-        
-    }
-        catch(Exception e){
-            System.out.println("Invalid Position Exception");
+            else{
+                throw new Exception("Invalid Position Exception");
+            }
         }
+        catch(Exception e){
+
+           // System.out.println("Invalid Position Exception");
+            System.out.println(e.getMessage());
+        
     
-}
+        }
+    }
 
     /*
      * Get method has to return the items that is at the index position passed
