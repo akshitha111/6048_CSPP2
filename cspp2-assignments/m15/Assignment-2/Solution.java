@@ -36,15 +36,15 @@ class SortedSet extends Set {
     /**
      * returns subset.
      *
-     * @param      start  The start
-     * @param      end    The end
+     * @param      start  int start
+     * @param      end    int end
      *
      * @return     from start to end returns elements.
+     * @throws  Exception if a problem occurs.
      */
-    public int[] subSet(final int start, final int end) throws Exception{
+    public int[] subSet(final int start, final int end) throws Exception {
         if (start > end) {
-            throw new Exception ("Invalid Arguments to Subset Exception");
-            //return null;
+            throw new Exception("Invalid Arguments to Subset Exception");
         }
         int[] result = new int[size];
         int k = 0;
@@ -66,8 +66,10 @@ class SortedSet extends Set {
      * @param      end   int end
      *
      * @return     returms elements.
+     * @throws  Exception if a problem occurs.
+     *
      */
-    public int[] headSet(final int end) throws Exception{
+    public int[] headSet(final int end) throws Exception {
         int[] result = new int[size];
         int temp = 0;
 
@@ -77,37 +79,25 @@ class SortedSet extends Set {
                 temp++;
             }
         }
-        if(temp == 0) {
+        if (temp == 0) {
             throw new Exception("Set Empty Exception");
-        }
-        else {
+        } else {
             return Arrays.copyOf(result, temp);
         }
-    
-        
     }
     /**
      * The last function.
      *
      * @return     returns list of elements.
+     * @throws  Exception if a problem occurs.
+     *
      */
     public int last() throws Exception {
-        if(size == 0) {
+        if (size == 0) {
                 throw new Exception("Set Empty Exception");
-        } return set[size - 1];
+        }
+        return set[size - 1];
 }
-/*public String print() {
-        // System.out.println("Here");
-        if (this.size() == 0) {
-            return "{}";
-        }
-        StringBuilder sb = new StringBuilder("{");
-        for (int i = 0; i < size - 1; i++) {
-            sb.append(set[i] + ", ");
-        }
-        sb.append(set[size - 1] + "}");
-        return sb.toString();
-    }*/
     /**
      * Adds all.
      *
@@ -153,7 +143,7 @@ public final class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main (final String[] args) {
+    public static void main(final String[] args) {
         // instantiate this set
         SortedSet s = new SortedSet();
         // code to read the test cases input file
@@ -220,10 +210,10 @@ public final class Solution {
                     System.out.println(Arrays.toString(object).replace("[",
                         "{").replace("]", "}"));
                 }
-            } catch(Exception e) {
+            } catch (Exception e) {
                 System.out.println(e.getMessage());
-                
-            }break;
+            }
+            break;
 
             case "headSet":
             try {
@@ -235,9 +225,10 @@ public final class Solution {
                     System.out.println(Arrays.toString(obj).replace("[",
                         "{").replace("]", "}"));
                 }
-            } catch(Exception e) {
-                System.out.println(e.getMessage());                
-            }break;
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+            break;
             case "last":
             try {
                 if (tokens.length != 1) {
@@ -245,9 +236,10 @@ public final class Solution {
                 }
                 int temp = s.last();
                 System.out.println(temp);
-            } catch(Exception e) {
-                System.out.println(e.getMessage());               
-            } break;
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+            break;
             case "addAll":
                 int[] intArr = intArray(tokens[1]);
                 if (intArr.length == 1) {
