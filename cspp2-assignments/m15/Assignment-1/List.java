@@ -6,12 +6,6 @@ import java.util.Arrays;
 *class list.
 *
 */
-class MyException extends Exception {
-    public MyException(String s) {
-        super(s);
-    }
-}
-
 public class List {
     //Implement all the methods mentioned to build a ListADT
 
@@ -179,8 +173,6 @@ public class List {
             }
         }
         catch(Exception e){
-
-           // System.out.println("Invalid Position Exception");
             System.out.println(e.getMessage());
         
     
@@ -356,7 +348,8 @@ public class List {
      */
     public List subList(final int start, final int end) {
     // write the logic for subList
-   if (start > end) {
+   
+    if (start > end) {
     System.out.println("Index Out of Bounds Exception");
     return null;
    }
