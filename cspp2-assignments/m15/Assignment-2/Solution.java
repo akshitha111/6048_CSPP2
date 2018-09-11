@@ -76,11 +76,14 @@ class SortedSet extends Set {
                 result[i] = set[i];
                 temp++;
             }
-            if(result.length == 0) {
+        }
+        if(result.length == 0) {
             throw new Exception("Set Empty Exception");
         }
+        else {
+            return Arrays.copyOf(result, temp);
         }
-        return Arrays.copyOf(result, temp);
+    
         
     }
     /**
