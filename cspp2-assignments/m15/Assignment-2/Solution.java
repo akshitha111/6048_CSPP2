@@ -97,7 +97,7 @@ class SortedSet extends Set {
         } return set[size - 1];
 }
 public String print() {
-        System.out.println("Here");
+        // System.out.println("Here");
         if (this.size() == 0) {
             return "{}";
         }
