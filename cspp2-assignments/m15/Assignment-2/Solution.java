@@ -96,7 +96,7 @@ class SortedSet extends Set {
                 throw new Exception("Set Empty Exception");
         } return set[size - 1];
 }
-public String print() {
+/*public String print() {
         // System.out.println("Here");
         if (this.size() == 0) {
             return "{}";
@@ -107,7 +107,7 @@ public String print() {
         }
         sb.append(set[size - 1] + "}");
         return sb.toString();
-    }
+    }*/
     /**
      * Adds all.
      *
@@ -173,7 +173,7 @@ public final class Solution {
                 System.out.println(s.contains(Integer.parseInt(tokens[1])));
                 break;
             case "print":
-                System.out.println(s.print());
+                System.out.println(s);
                 break;
             case "add":
                 int[] intArray = intArray(tokens[1]);
