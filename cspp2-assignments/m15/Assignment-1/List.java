@@ -167,14 +167,11 @@ public class List extends Exception {
                 }
                 list[list.length - 1] = 0;
                 size--;
-            } else{
+            } else {
                 throw new Exception("Invalid Position Exception");
             }
-        }
-        catch(Exception e){
+        } catch (Exception e) {
             System.out.println(e.getMessage());
-        
-    
         }
     }
 
@@ -344,8 +341,9 @@ public class List extends Exception {
      * @param      end    The end
      *
      * @return     sublist
+     * @throws Exception if a problem occurs.
      */
-    public List subList (final int start, final int end)throws Exception {
+    public List subList(final int start, final int end) throws Exception {
     // write the logic for subList
     if (start > end) {
     throw new Exception("Index Out of Bounds Exception");
@@ -487,10 +485,8 @@ public class List extends Exception {
                     if (object != null) {
                         System.out.println(object);
                     }
-                }
-                catch(Exception e) {
+                } catch (Exception e) {
                     System.out.println(e.getMessage());
-                    
                 }
                 break;
                 case "equals":
