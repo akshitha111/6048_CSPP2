@@ -36,31 +36,30 @@ class SortedSet extends Set {
     /**
      * returns subset.
      *
-     * @param      fromElement  int fromElement
-     * @param      toElement    int toElement
+     * @param      start  The start
+     * @param      end    The end
      *
-     * @return     from fromElement to toElement returns elements.
+     * @return     from start to end returns elements.
      */
-    public int[] subSet(int fromElement, int toElement) {
-        int[] result = new int[10];
-    if(fromElement > toElement) {
-        System.out.println("Invalid​ ​ Arguments​ ​ to​ ​ Subset​ ​ Exception");
-    }else {
-        
-        int j = 0;
-        for(int i : set) {
-            if(i >= fromElement && i < toElement) {
-                result[j] = i;
-                j++;
-            }
-        
-            
+    public int[] subSet(final int start, final int end) {
+        if (start > end) {
+            System.out.println("Invalid Arguments to Subset Exception");
+            return null;
         }
-
-     
+        int[] result = new int[size];
+        int k = 0;
+        for (int i = 0; i < size; i++) {
+            if (set[i] >= start) {
+                for (int j = i; j < size; j++) {
+                    if (set[j] < end) {
+                        result[k++] = set[i];
+                    }
+                    break;
+                }
+            }
+        }
+        return Arrays.copyOf(result, k);
     }
-    return result;
-}
     /**
      * The headset function.
      *
