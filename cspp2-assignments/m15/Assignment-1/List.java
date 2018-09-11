@@ -163,6 +163,7 @@ public class List extends Exception{
         // variable.
         try {
         //if (index >= 0 && index < size) {
+            System.out.println(index);
             for (int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
