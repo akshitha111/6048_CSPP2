@@ -91,16 +91,13 @@ class SortedSet extends Set {
      *
      * @return     returns list of elements.
      */
-    public int last() {
+    public int last() throws Exception {
         if(size == 0) {
-            try {
                 throw new Exception("Set Empty Exception");
-            } catch(Exception e) {
-                System.out.println(e.getMessage());
-            }
         } return set[size - 1];
 }
 public String print() {
+        System.out.println("Here");
         if (this.size() == 0) {
             return "{}";
         }
@@ -242,12 +239,15 @@ public final class Solution {
                 System.out.println(e.getMessage());                
             }break;
             case "last":
+            try {
                 if (tokens.length != 1) {
                     break;
                 }
                 int temp = s.last();
                 System.out.println(temp);
-                break;
+            } catch(Exception e) {
+                System.out.println(e.getMessage());               
+            } break;
             case "addAll":
                 int[] intArr = intArray(tokens[1]);
                 if (intArr.length == 1) {
