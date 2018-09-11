@@ -1,11 +1,13 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
+
 /**
 *class list.
 *
 */
-public class List {
+
+public class List extends Exception{
     //Implement all the methods mentioned to build a ListADT
 
     /*
