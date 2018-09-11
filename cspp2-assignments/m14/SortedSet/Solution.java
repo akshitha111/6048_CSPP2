@@ -68,15 +68,17 @@ class SortedSet extends Set {
      *
      * @return     returms elements.
      */
-    public int[] headSet(int toElement) {
-    int[] result = new int[10];
-    int j = 0;
-    for(int i : set) {
-        if(i < toElement)
-        result[j] = i;
-        j++;
-    }return result;
-}
+    public int[] headSet(final int end) {
+        int[] result = new int[size];
+        int temp = 0;
+        for (int i = 0; i < size; i++) {
+            if (set[i] < end) {
+                result[i] = set[i];
+                temp++;
+            }
+        }
+        return Arrays.copyOf(result, temp);
+    }
     /**
      * The last function.
      *
