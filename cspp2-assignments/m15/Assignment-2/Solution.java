@@ -70,14 +70,15 @@ class SortedSet extends Set {
     public int[] headSet(final int end) throws Exception{
         int[] result = new int[size];
         int temp = 0;
-        if(result.length == 0) {
-            throw new Exception("Set Empty Exception");
-        }
+
         for (int i = 0; i < size; i++) {
             if (set[i] < end) {
                 result[i] = set[i];
                 temp++;
             }
+            if(result.length == 0) {
+            throw new Exception("Set Empty Exception");
+        }
         }
         return Arrays.copyOf(result, temp);
         
