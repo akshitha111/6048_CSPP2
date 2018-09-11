@@ -135,7 +135,7 @@ public final class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(final String[] args) {
+    public static void main (final String[] args) {
         // instantiate this set
         SortedSet s = new SortedSet();
         // code to read the test cases input file
