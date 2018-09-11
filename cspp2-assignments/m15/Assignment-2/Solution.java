@@ -77,7 +77,7 @@ class SortedSet extends Set {
                 temp++;
             }
         }
-        if(result.length == 0) {
+        if(temp == 0) {
             throw new Exception("Set Empty Exception");
         }
         else {
