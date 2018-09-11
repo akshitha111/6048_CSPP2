@@ -97,6 +97,7 @@ class SortedSet extends Set {
                 throw new Exception("Set Empty Exception");
             } catch(Exception e) {
             System.out.println(e.getMessage());
+            System.out.println("{}");
             }
            
         } 
