@@ -41,10 +41,10 @@ class SortedSet extends Set {
      *
      * @return     from start to end returns elements.
      */
-    public int[] subSet(final int start, final int end) {
+    public int[] subSet(final int start, final int end) throws Exception{
         if (start > end) {
-            System.out.println("Invalid Arguments to Subset Exception");
-            return null;
+            throw new Exception ("Invalid Arguments to Subset Exception");
+            //return null;
         }
         int[] result = new int[size];
         int k = 0;
@@ -191,6 +191,7 @@ public final class Solution {
                 System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
                 break;
             case "subSet":
+            try {
                 if (tokens.length != 2) {
                     break;
                 }
@@ -201,7 +202,10 @@ public final class Solution {
                     System.out.println(Arrays.toString(object).replace("[",
                         "{").replace("]", "}"));
                 }
+            } catch(Exception e) {
+                System.out.println(e.getMessage());
                 break;
+            }
             case "headSet":
                 if (tokens.length != 2) {
                     break;
