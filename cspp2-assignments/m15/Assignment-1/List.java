@@ -262,6 +262,24 @@ public class List {
         }
         return -1;
     }
+    /* Returns the count of occurances of a given item in the list*/
+/**
+ * { count function. }
+ *
+ * @param      item  int item.
+ *
+ * @return     { int count }
+ */
+    public int count(final int item) {
+         // write the logic
+        int count = 0;
+        for (int i = 0; i < list.length; i++) {
+            if (item == list[i]) {
+                count++;
+            }
+        }
+        return count;
+    }
     /*
     Inserts all the elements of specified int array to the end of list
     */
@@ -436,6 +454,9 @@ public class List {
                         }
                         l.addAll(temp);
                     }
+                break;
+                case "count":
+                System.out.println(l.count(Integer.parseInt(tokens[1])));
                 break;
                 case "removeAll":
                     if (tokens.length == 2) {
