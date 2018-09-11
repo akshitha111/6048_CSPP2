@@ -109,7 +109,7 @@ public class List extends Exception {
     /**
      * add element to list.
      *
-     * @param      item  The item
+     * @param      item  int item
      */
     public void add(final int item) {
         //Inserts the specified element at the end of the list.
@@ -239,7 +239,7 @@ public class List extends Exception {
     /**
      *checks for a item in the list.
      *
-     * @param      item  The item
+     * @param      item  int item
      *
      * @return     true if present else false.
      */
@@ -254,7 +254,7 @@ public class List extends Exception {
     /**
      * Searches for the element.
      *
-     * @param      item  The item
+     * @param      item  int item
      *
      * @return     index of element if preent else -1.
      */
