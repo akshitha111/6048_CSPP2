@@ -100,6 +100,17 @@ class SortedSet extends Set {
             }
         } return set[size - 1];
 }
+public String print() {
+        if (this.size() == 0) {
+            return "{}";
+        }
+        StringBuilder sb = new StringBuilder("{");
+        for (int i = 0; i < size - 1; i++) {
+            sb.append(set[i] + ", ");
+        }
+        sb.append(set[size - 1] + "}");
+        return sb.toString();
+    }
     /**
      * Adds all.
      *
@@ -165,7 +176,7 @@ public final class Solution {
                 System.out.println(s.contains(Integer.parseInt(tokens[1])));
                 break;
             case "print":
-                System.out.println(s);
+                System.out.println(s.print());
                 break;
             case "add":
                 int[] intArray = intArray(tokens[1]);
