@@ -67,9 +67,12 @@ class SortedSet extends Set {
      *
      * @return     returms elements.
      */
-    public int[] headSet(final int end) {
+    public int[] headSet(final int end) throws Exception{
         int[] result = new int[size];
         int temp = 0;
+        if(result.length == 0) {
+            throw new Exception("Set Empty Exception");
+        }
         for (int i = 0; i < size; i++) {
             if (set[i] < end) {
                 result[i] = set[i];
@@ -77,6 +80,7 @@ class SortedSet extends Set {
             }
         }
         return Arrays.copyOf(result, temp);
+        
     }
     /**
      * The last function.
@@ -206,7 +210,9 @@ public final class Solution {
                 System.out.println(e.getMessage());
                 
             }break;
+
             case "headSet":
+            try {
                 if (tokens.length != 2) {
                     break;
                 }
@@ -215,7 +221,9 @@ public final class Solution {
                     System.out.println(Arrays.toString(obj).replace("[",
                         "{").replace("]", "}"));
                 }
-                break;
+            } catch(Exception e) {
+                System.out.println(e.getMessage());                
+            }break;
             case "last":
                 if (tokens.length != 1) {
                     break;
