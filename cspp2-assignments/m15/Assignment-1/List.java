@@ -6,7 +6,7 @@ import java.util.Arrays;
 *class list.
 *
 */
-public class List extends Exception{
+public class List extends Exception {
     //Implement all the methods mentioned to build a ListADT
 
     /*
@@ -167,8 +167,7 @@ public class List extends Exception{
                 }
                 list[list.length - 1] = 0;
                 size--;
-            }
-            else{
+            } else{
                 throw new Exception("Invalid Position Exception");
             }
         }
