@@ -92,20 +92,14 @@ class SortedSet extends Set {
      * @return     returns list of elements.
      */
     public int last() {
-        if (size == 0) {
-            try{
+        if(size == 0) {
+            try {
                 throw new Exception("Set Empty Exception");
             } catch(Exception e) {
-            System.out.println(e.getMessage());
-            System.out.println("{}");
+                System.out.println(e.getMessage());
             }
-           
-        } 
-        return set[size - 1];
-    
-    } 
-
-
+        } return set[size - 1];
+}
     /**
      * Adds all.
      *
