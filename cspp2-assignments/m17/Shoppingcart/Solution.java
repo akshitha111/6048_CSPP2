@@ -119,9 +119,10 @@ class Solution {
 	}
 
 public static void main(String[] args) {
-	Scanner sc = new Scanner(System.in);
-	while (sc.hasNext()) {
-		String line = sc.nextLine();
+	ShoppingCart sc = new ShoppingCart();
+	Scanner s = new Scanner(System.in);
+	while (s.hasNext()) {
+		String line = s.nextLine();
 		String[] tokens = line.split(" ");
 		switch (tokens[0]) {
 			case "Item":
@@ -130,6 +131,8 @@ public static void main(String[] args) {
 			}
 			break;
 			case "catalog":
+			sc.showCatalog();
+
 			break;
 			case "add":
 			break;
