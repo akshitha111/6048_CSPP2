@@ -62,13 +62,41 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
+        int count = 0;
+        
+        if(questionCount < 1){
+            System.out.println("Quiz does not have questions");
+            return;
+        }
+        for(int i = 0; i < questionCount; i++) {
+            String q = s.nextLine();
+            System.out.println(q);
+        }
+    }
+            /*String[] field = q.split(":");
+            if(Integer.parseInt(field[3]) <= 0){
+                System.out.println("Invalid max marks for question about sony");
+                return;
+            }
+            if(Integer.parseInt(field[4]) > 0)
+            {
+                System.out.println("Invalid max marks for question about sony");
+                return;
+            }
+            for(int j = 0; j < field.length; j++) {
+                count++;
+            }
+        }
+        if(count != 0) {
+            System.out.println("Error! Malformed question");
+        }
         if(questionCount > 0) {
         System.out.println(questionCount + " are added to the quiz");
     }
     if(questionCount == 0) {
         System.out.println("Quiz does not have questions");
     }
-    }
+    }*/
 
     /**
      * Starts a quiz.
@@ -86,7 +114,7 @@ public final class Solution {
             System.out.println("question text " + i + "(" + i + ")");
             for(int j = 1; j <= 4; j++) {
                 System.out.print("choice " + j + "\t");
-                
+
             }System.out.println();
         }
     }
