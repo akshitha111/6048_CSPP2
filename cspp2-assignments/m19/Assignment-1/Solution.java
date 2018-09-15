@@ -80,18 +80,18 @@ public final class Solution {
             String sc = s.nextLine();
             tokens = sc.split(":");
             }
-            if (tokens.length != FIVE) {
-                System.out.println("Error! Malformed question");
-                return;
-            }
             String[] choices = tokens[1].split(",");
             if (choices.length < 2) {
                 System.out.println(tokens[0] + " "
                  + "does not have enough answer choices");
                 return;
-            }            
+            }
             if (Integer.parseInt(tokens[2 + 1]) <= 0) {
                 System.out.println("Invalid max marks for" + " " + tokens[0]);
+                return;
+            }
+            if (tokens.length != FIVE) {
+                System.out.println("Error! Malformed question");
                 return;
             }
             if (Integer.parseInt(tokens[2]) < 1
