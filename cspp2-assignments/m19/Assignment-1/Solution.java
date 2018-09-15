@@ -81,8 +81,13 @@ public final class Solution {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
-        for(int i = 0; i <= answerCount; i++) {
-            System.out.println("question text" + i + "(" + i + ")");
+        //int choice = 4;
+        for(int i = 1; i <= answerCount; i++) {
+            System.out.println("question text " + i + "(" + i + ")");
+            for(int j = 1; j <= 4; j++) {
+                System.out.print("choice " + j + "\t");
+                
+            }System.out.println();
         }
     }
 
