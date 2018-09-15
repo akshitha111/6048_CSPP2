@@ -82,7 +82,7 @@ public final class Solution {
                 return;
             }
             if(Integer.parseInt(field[2]) < 1 || Integer.parseInt(field[2]) >= choices.length) {
-                System.out.println("Error! Correct answer choice number is out of range for" + field[0]);
+                System.out.println("Error! Correct answer choice number is out of range for " + field[0]);
             }
             if(Integer.parseInt(field[3]) <= 0) {
                 System.out.println("Invalid max marks for" + " " + field[0]);
