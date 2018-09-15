@@ -64,7 +64,6 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
-        //List<Quiz> = new List<Quiz>;
         int count = 0;
         String[] tokens = new String[questionCount];        
         if(questionCount < 1) {
@@ -72,11 +71,11 @@ public final class Solution {
             return;
         }
         for(int i = 0; i < questionCount; i++) {
-            String q = s.nextLine();
-            tokens = q.split(":");
+            String sc = s.nextLine();
+            tokens = sc.split(":");
             }
-            if(tokens.length != 5) {
-                System.out.println("Error! Malformed question");
+            if(tokens.length == 5) {
+                System.out.println(questionCount + " " + "are added to the quiz");
                 return;
             }
             String[] choices = tokens[1].split(",");
@@ -98,7 +97,7 @@ public final class Solution {
                 return;
             }
             else {
-                System.out.println(questionCount + " " + "are added to the quiz");
+                System.out.println("Error! Malformed question");
             }
 
         }
