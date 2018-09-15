@@ -63,19 +63,38 @@ public final class Solution {
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
         int count = 0;
-        
-        if(questionCount < 1){
+        String[] field = new String[questionCount];        
+        if(questionCount < 1) {
             System.out.println("Quiz does not have questions");
             return;
         }
         for(int i = 0; i < questionCount; i++) {
             String q = s.nextLine();
-            String[] field = q.split(":");
-            for(int j = 0; j < field.length; j++) {
-                
+            field = q.split(":");
+            }
+            if(field.length != 0){
+                System.out.println("Error! Malformed question");
+                return;
+            }
+            String[] choices = field[1].split(",");
+            if(choices.length<2){
+                System.out.println(field[0] + " " + "does not have enough answer choices");
+                return;
+            }
+            if(Integer.parseInt(field[2]) < 1 || Integer.parseInt(field[2]) >= choices.length) {
+                System.out.println("Error! Correct answer choice number is out of range for question text 1");
+            }
+            if(Integer.parseInt(field[3]) <= 0) {
+                System.out.println("Invalid max marks for" + " " + field[0]);
+                return;
+            }
+            if(Integer.parseInt(field[4]) > 0)
+            {
+                System.out.println("Invalid penalty for" + " " + field[0]);
+                return;
             }
         }
-    }
+    
             /*String[] field = q.split(":");
             if(Integer.parseInt(field[3]) <= 0){
                 System.out.println("Invalid max marks for question about sony");
