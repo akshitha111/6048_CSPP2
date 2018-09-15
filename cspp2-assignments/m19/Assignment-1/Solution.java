@@ -51,6 +51,8 @@ public final class Solution {
             }
         }
     }
+
+
     /**
      * Loads questions.
      *
@@ -62,6 +64,7 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
+        //List<Quiz> = new List<Quiz>;
         int count = 0;
         String[] field = new String[questionCount];        
         if(questionCount < 1) {
@@ -82,7 +85,7 @@ public final class Solution {
                 return;
             }
             if(Integer.parseInt(field[2]) < 1 || Integer.parseInt(field[2]) >= choices.length) {
-                System.out.println("Error! Correct answer choice number is out of range for " + field[0]);
+                System.out.println("Error! Correct answer choice number is out of range for" + " " + field[0]);
             }
             if(Integer.parseInt(field[3]) <= 0) {
                 System.out.println("Invalid max marks for" + " " + field[0]);
@@ -93,9 +96,10 @@ public final class Solution {
                 System.out.println("Invalid penalty for" + " " + field[0]);
                 return;
             }
+
         }
     
-            /*String[] field = q.split(":");
+            /*Stri;
             if(Integer.parseInt(field[3]) <= 0){
                 System.out.println("Invalid max marks for question about sony");
                 return;
@@ -132,13 +136,13 @@ public final class Solution {
         // read the user responses from the console
         // store the user respones in the quiz object
         //int choice = 4;
-        for(int i = 1; i <= answerCount; i++) {
+        /*for(int i = 1; i <= answerCount; i++) {
             System.out.println("question text " + i + "(" + i + ")");
             for(int j = 1; j <= 4; j++) {
                 System.out.print("choice " + j + "\t");
 
             }System.out.println();
-        }
+        }*/
     }
 
     /**
@@ -148,13 +152,24 @@ public final class Solution {
      */
     public static void displayScore(final Quiz quiz) {
         // write your code here to display the score report
-    }
+       /* private String questionText;
+        private String[] choices;
+        private int correctAnswer;
+        private int marksAwarded;
+        private int penalty;
+        Quiz(String q, String[] c, int ca, int ma, int p)
+        {
+
+        }*/
+    
+
+}
 }
 
-class Quiz {
 
 
-}
-class Questions {
+
+
+/*class Questions {
     Questions questions[] = new Questions[10];
-}
+}*/
