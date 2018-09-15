@@ -75,7 +75,7 @@ public final class Solution {
             String q = s.nextLine();
             tokens = q.split(":");
             }
-            if(tokens.length != 6) {
+            if(tokens.length != 4 || tokens.length != 5) {
                 System.out.println("Error! Malformed question");
                 return;
             }
