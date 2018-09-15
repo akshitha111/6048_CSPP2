@@ -4,10 +4,15 @@ import java.util.Scanner;
  * Solution class for code-eval.
  */
 public final class Solution {
+    /**
+     * this is a magic number.
+     */
+    private static final int FIVE = 5;
      /**
      * Constructs the object.
      */
     private Solution() {
+
         // leave this blank
     }
     /**
@@ -60,49 +65,51 @@ public final class Solution {
      * @param      quiz           The quiz object
      * @param      questionCount  The question count
      */
-    public static void loadQuestions(final Scanner s, final Quiz quiz, final int questionCount) {
+    public static void loadQuestions(final Scanner s, final Quiz quiz,
+     final int questionCount) {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
         int count = 0;
-        String[] tokens = new String[questionCount];        
-        if(questionCount < 1) {
+        String[] tokens = new String[questionCount];
+        if (questionCount < 1) {
             System.out.println("Quiz does not have questions");
             return;
         }
-        for(int i = 0; i < questionCount; i++) {
+        for (int i = 0; i < questionCount; i++) {
             String sc = s.nextLine();
             tokens = sc.split(":");
             }
-            if(tokens.length != 5) {
+            if (tokens.length != FIVE) {
                 System.out.println("Error! Malformed question");
                 return;
             }
             String[] choices = tokens[1].split(",");
-            if(choices.length<2){
-                System.out.println(tokens[0] + " " + "does not have enough answer choices");
+            if (choices.length < 2) {
+                System.out.println(tokens[0] + " "
+                 + "does not have enough answer choices");
                 return;
-            }
-            if(Integer.parseInt(tokens[2]) < 1 || Integer.parseInt(tokens[2]) >= choices.length) {
-                System.out.println("Error! Correct answer choice number is out of range for" + " " + tokens[0]);
-                return;
-            }
-            if(Integer.parseInt(tokens[3]) <= 0) {
+            }            
+            if (Integer.parseInt(tokens[2 + 1]) <= 0) {
                 System.out.println("Invalid max marks for" + " " + tokens[0]);
                 return;
             }
-            if(Integer.parseInt(tokens[4]) > 0)
-            {
-                System.out.println("Invalid penalty for" + " " + tokens[0]);
+            if (Integer.parseInt(tokens[2]) < 1
+             || Integer.parseInt(tokens[2]) >= choices.length) {
+                System.out.println(
+                "Error! Correct answer choice number is out of range for"
+                 + " " + tokens[0]);
                 return;
             }
-            else {
-                System.out.println(questionCount + " " + "are added to the quiz");
+            if (Integer.parseInt(tokens[2 + 2]) > 0) {
+                System.out.println("Invalid penalty for" + " " + tokens[0]);
+                return;
+            } else {
+                System.out.println(questionCount + " "
+                 + "are added to the quiz");
             }
 
         }
-    
-
     /**
      * Starts a quiz.
      *
@@ -110,46 +117,37 @@ public final class Solution {
      * @param      quiz         The quiz object
      * @param      answerCount  The answer count
      */
-    public static void startQuiz(final Scanner s, final Quiz quiz, final int answerCount) {
+    public static void startQuiz(final Scanner s,
+     final Quiz quiz, final int answerCount) {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
-        if(answerCount > 1){
-        for(int i = 1; i <= answerCount; i++) {
+        if (answerCount > 1) {
+        for (int i = 1; i <= answerCount; i++) {
             System.out.println("question text " + i + "(" + i + ")");
-            for(int j = 1; j <= 4; j++) {
+            for (int j = 1; j <= 2 + 2; j++) {
                 System.out.print("choice " + j + "\t");
 
-            }System.out.println();
+            } System.out.println();
         }
     }
 }
 
     /**
-     * Displays the score report
+     * Displays the score .
      *
      * @param      quiz     The quiz object
      */
     public static void displayScore(final Quiz quiz) {
         // write your code here to display the score report
-       /* private String questionText;
-        private String[] choices;
-        private int correctAnswer;
-        private int marksAwarded;
-        private int penalty;
-        Quiz(String q, String[] c, int ca, int ma, int p)
-        {
-
-        }*/
-    
-
 }
 }
-
-
 
 
 
 /*class Questions {
     Questions questions[] = new Questions[10];
 }*/
+
+
+
