@@ -77,10 +77,6 @@ public final class Solution {
                 return;
             }
             String[] choices = field[1].split(",");
-            if(choices.length == 4) {
-                System.out.println("4 are added to the quiz");
-                return;
-            }
             if(choices.length<2){
                 System.out.println(field[0] + " " + "does not have enough answer choices");
                 return;
