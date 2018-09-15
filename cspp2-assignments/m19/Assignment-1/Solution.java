@@ -65,6 +65,9 @@ public final class Solution {
         if(questionCount > 0) {
         System.out.println(questionCount + " are added to the quiz");
     }
+    if(questionCount == 0) {
+        System.out.println("Quiz does not have questions");
+    }
     }
 
     /**
