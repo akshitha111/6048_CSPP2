@@ -75,7 +75,7 @@ public final class Solution {
             tokens = sc.split(":");
             }
             if(tokens.length == 5) {
-                System.out.println(questionCount + " " + "are added to the quiz");
+                System.out.println("Error! Malformed question");
                 return;
             }
             String[] choices = tokens[1].split(",");
@@ -97,7 +97,7 @@ public final class Solution {
                 return;
             }
             else {
-                System.out.println("Error! Malformed question");
+                System.out.println(questionCount + " " + "are added to the quiz");
             }
 
         }
