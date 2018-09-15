@@ -96,6 +96,9 @@ public final class Solution {
                 System.out.println("Invalid penalty for" + " " + field[0]);
                 return;
             }
+            else {
+                System.out.println(questionCount + " " + "are added to the quiz");
+            }
 
         }
     
