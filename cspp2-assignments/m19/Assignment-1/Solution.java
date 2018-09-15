@@ -121,7 +121,7 @@ public final class Solution {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
-        if (answerCount > 1) {
+        //if (answerCount > 1) {
         for (int i = 1; i <= answerCount; i++) {
             System.out.println("question text " + i + "(" + i + ")");
             for (int j = 1; j <= 2 + 2; j++) {
@@ -130,7 +130,7 @@ public final class Solution {
             } System.out.println();
         }
     }
-}
+
 
     /**
      * Displays the score .
