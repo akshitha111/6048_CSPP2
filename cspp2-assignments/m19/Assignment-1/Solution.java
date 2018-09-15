@@ -66,35 +66,35 @@ public final class Solution {
         // add the question objects to the quiz class
         //List<Quiz> = new List<Quiz>;
         int count = 0;
-        String[] field = new String[questionCount];        
+        String[] tokens = new String[questionCount];        
         if(questionCount < 1) {
             System.out.println("Quiz does not have questions");
             return;
         }
         for(int i = 0; i < questionCount; i++) {
             String q = s.nextLine();
-            field = q.split(":");
+            tokens = q.split(":");
             }
-            if(field.length != 5) {
+            if(tokens.length != 5) {
                 System.out.println("Error! Malformed question");
                 return;
             }
-            String[] choices = field[1].split(",");
+            String[] choices = tokens[1].split(",");
             if(choices.length<2){
-                System.out.println(field[0] + " " + "does not have enough answer choices");
+                System.out.println(tokens[0] + " " + "does not have enough answer choices");
                 return;
             }
-            if(Integer.parseInt(field[2]) < 1 || Integer.parseInt(field[2]) >= choices.length) {
-                System.out.println("Error! Correct answer choice number is out of range for" + " " + field[0]);
+            if(Integer.parseInt(tokens[2]) < 1 || Integer.parseInt(tokens[2]) >= choices.length) {
+                System.out.println("Error! Correct answer choice number is out of range for" + " " + tokens[0]);
                 return;
             }
-            if(Integer.parseInt(field[3]) <= 0) {
-                System.out.println("Invalid max marks for" + " " + field[0]);
+            if(Integer.parseInt(tokens[3]) <= 0) {
+                System.out.println("Invalid max marks for" + " " + tokens[0]);
                 return;
             }
-            if(Integer.parseInt(field[4]) > 0)
+            if(Integer.parseInt(tokens[4]) > 0)
             {
-                System.out.println("Invalid penalty for" + " " + field[0]);
+                System.out.println("Invalid penalty for" + " " + tokens[0]);
                 return;
             }
             else {
@@ -115,7 +115,7 @@ public final class Solution {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
-        //int choice = 4;
+        if(answerCount > 1){
         for(int i = 1; i <= answerCount; i++) {
             System.out.println("question text " + i + "(" + i + ")");
             for(int j = 1; j <= 4; j++) {
@@ -124,6 +124,7 @@ public final class Solution {
             }System.out.println();
         }
     }
+}
 
     /**
      * Displays the score report
