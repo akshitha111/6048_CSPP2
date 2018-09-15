@@ -72,7 +72,7 @@ public final class Solution {
             String q = s.nextLine();
             field = q.split(":");
             }
-            if(field.length != 0){
+            if(field.length != 5) {
                 System.out.println("Error! Malformed question");
                 return;
             }
