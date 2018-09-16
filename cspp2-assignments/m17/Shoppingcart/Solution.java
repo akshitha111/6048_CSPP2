@@ -121,10 +121,10 @@ class ShoppingCart {
         for(int i =0; i < cart.size();i++){
             for(int j =0 ; j < catalog.size(); j++) {
                  if(cart.get(i).getProductName().equals(catalog.get(j).getProductName())){
-                    System.out.println(totalAmount);
-                    totalAmount = totalAmount * 0.15;
-                    System.out.println(totalAmount);
-                    payableAmount += totalAmount + (cart.get(i).getQuantity() * catalog.get(j).getUnitPrice());
+                    //System.out.println(totalAmount);
+                    //totalAmount = totalAmount * 0.15;
+                    //System.out.println(totalAmount);
+                    payableAmount = (cart.get(i).getQuantity() * catalog.get(j).getUnitPrice());
                    // payableAmount = payableAmount + (totalAmount*0.15);
                 }
 
