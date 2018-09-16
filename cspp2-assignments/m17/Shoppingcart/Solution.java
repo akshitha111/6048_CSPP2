@@ -124,6 +124,7 @@ class ShoppingCart {
                  if(cart.get(i).getProductName().equals(catalog.get(j).getProductName())){
                     
                     payableAmount += (cart.get(i).getQuantity() * catalog.get(j).getUnitPrice());
+                    payableAmount = totalAmount * 0.15;
                    
                 }       
     }
