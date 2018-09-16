@@ -82,6 +82,7 @@ class ShoppingCart {
 
     public void showCart() {
         for(int i = 0; i < cart.size(); i++) {
+            Item item = cart.get(i);
             System.out.println(cart.get(i).getProductName() + " " + cart.get(i).getQuantity());
         }
 
