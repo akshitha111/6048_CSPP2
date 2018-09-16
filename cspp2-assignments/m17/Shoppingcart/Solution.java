@@ -118,26 +118,17 @@ class ShoppingCart {
 }
 
     public double getPayableAmount() {
+        payableAmount = 0;
         for(int i =0; i < cart.size();i++){
             for(int j =0 ; j < catalog.size(); j++) {
                  if(cart.get(i).getProductName().equals(catalog.get(j).getProductName())){
-                    //System.out.println(totalAmount);
-                    //totalAmount = totalAmount * 0.15;
-                    //System.out.println(totalAmount);
+                    
                     payableAmount = (cart.get(i).getQuantity() * catalog.get(j).getUnitPrice());
-                   // payableAmount = payableAmount + (totalAmount*0.15);
-                }
-
-        //this.payableAmount = cart.get(i).getQuantity() * cartgetUnitPrice();
-        
+                   
+                }       
     }
-        //return payableAmount;
         
-    
-    /*public double getTax() {
-        return totalAmount * .15;
-    }*/
-}return this.payableAmount; 
+    }return this.payableAmount; 
 }
 
     public void applyCoupon(final String coupon) {
