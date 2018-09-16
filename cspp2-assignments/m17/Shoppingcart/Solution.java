@@ -164,6 +164,7 @@ class ShoppingCart {
         }
     }
     if(!isCouponApplied){
+        payableAmount = payableAmount * couponCode;
     }
         
     if(isCouponApplied){
