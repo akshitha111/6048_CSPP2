@@ -98,7 +98,7 @@ class ShoppingCart {
         totalAmount = 0;
         for(int i = 0; i < cart.size(); i++) {
             for(int j =0 ; j < catalog.size(); j++) {
-                if(cart.get(i).getProductName().equals(catalog.get(i).getProductName())){
+                if(cart.get(i).getProductName().equals(catalog.get(j).getProductName())){
                     totalAmount = totalAmount + (cart.get(i).getQuantity() * catalog.get(j).getUnitPrice());
                 }
             }
