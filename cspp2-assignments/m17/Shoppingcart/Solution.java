@@ -136,6 +136,7 @@ class ShoppingCart {
 
         
             if (coupon.equals("IND10")) {
+                System.out.println("kk");
             couponCode = 0.1f;
             } else if (coupon.equals("IND20")) {
                 couponCode = 0.2f;
