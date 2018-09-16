@@ -157,7 +157,7 @@ class ShoppingCart {
         System.out.println("Name" + "   quantity" + "   Price");
         for(int i = 0; i < cart.size(); i++) {
             
-            System.out.print(cart.get(i).getProductName() + " " + cart.get(i).getQuantity());
+            System.out.print(cart.get(i).getProductName() + " " + cart.get(i).getQuantity() + " ");
             for(int j=0;j<catalog.size();j++){
             if(cart.get(i).getProductName().equals(catalog.get(j).getProductName())){
             System.out.println(catalog.get(j).getUnitPrice());     
