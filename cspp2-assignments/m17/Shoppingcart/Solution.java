@@ -170,6 +170,7 @@ class ShoppingCart {
         }
     }
     if(!isCouponApplied){
+        System.out.println("kk");
         double disc = totalAmount * couponCode;
          System.out.println("Total:" +getTotalAmount());
          System.out.println("Disc%:" + disc);
