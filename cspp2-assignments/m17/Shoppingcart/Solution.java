@@ -118,7 +118,7 @@ class ShoppingCart {
 }
 
     public double getPayableAmount() {
-        if(!isCouponApplied){
+        if(isCouponApplied){
         payableAmount = 0;
         for(int i =0; i < cart.size();i++){
             for(int j =0 ; j < catalog.size(); j++) {
