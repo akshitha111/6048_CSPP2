@@ -118,6 +118,7 @@ class ShoppingCart {
 }
 
     public double getPayableAmount() {
+        if(!isCouponApplied){
         payableAmount = 0;
         for(int i =0; i < cart.size();i++){
             for(int j =0 ; j < catalog.size(); j++) {
@@ -129,7 +130,8 @@ class ShoppingCart {
                 }       
     }
         
-    }return this.payableAmount; 
+    } 
+}return this.payableAmount;
 }
 
     public void applyCoupon(final String coupon) {
@@ -151,7 +153,9 @@ class ShoppingCart {
             }
            // isCouponApplied = true;
             this.payableAmount = getPayableAmount() * couponCode;
-            System.out.println(this.payableAmount);
+           System.out.println(this.payableAmount);
+            
+        }
         
         
         
@@ -165,7 +169,7 @@ class ShoppingCart {
         System.out.println("Payable amount: " + getPayableAmount());
     }*/
     
-    }
+    
 
     /*public double getDiscount() {
      
