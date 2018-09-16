@@ -165,9 +165,9 @@ class ShoppingCart {
     }
     if(!isCouponApplied)
         System.out.println("Total:" +getTotalAmount());
-        System.out.println("Disc%:" + 0);
+        System.out.println("Disc%:" + 0.0);
         System.out.println("Tax:" + getTax());
-        System.out.println("PayableAmount:" + getPayableAmount());
+        System.out.println("PayableAmount: " + getPayableAmount());
     }
 }
 
