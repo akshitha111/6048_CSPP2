@@ -19,7 +19,7 @@ public class List<E> {
     //Constructor
     public List() {
         // Create a variable of the type Object[]
-        list = ((E[])new Object[10]);//Object is the base class for all the classes
+        list = ((E[])new Object[20]);//Object is the base class for all the classes
         size = 0;
     }
     //Overloaded Constructor
@@ -114,11 +114,11 @@ public class List<E> {
      */
     public E get(int index) {
          //Write logic for get method
-        //  if(index < 0 || index >= size) 
-        //     return "-1";
-        //  else {
-        //     return list[index];
-        // }
+          /*if(index < 0 || index >= size) 
+             return -1;
+          else {
+             return list[index];
+         }*/
         return list[index];
     }
     /*
