@@ -156,7 +156,7 @@ class ShoppingCart {
     public void printInvoice() {
         System.out.println("Name" + "   quantity" + "   Price");
         for(int i = 0; i < cart.size(); i++) {
-            System.out.println(cart.get(i));            
+            System.out.println(cart.get(i).getProductName() + " " + cart.get(i).getQuantity());            
         }
         System.out.println("Total:" +getTotalAmount());
         //System.out.println("Disc%:" + getTotalAmount() - getDiscount());
