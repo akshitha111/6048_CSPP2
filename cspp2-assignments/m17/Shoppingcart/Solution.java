@@ -173,8 +173,8 @@ class ShoppingCart {
         double disc = totalAmount * couponCode;
          System.out.println("Total:" +getTotalAmount());
          System.out.println("Disc%:" + disc);
-        this.payableAmount = payableAmount * couponCode;
-        //System.out.println(payableAmount);
+        this.payableAmount = getPayableAmount() * couponCode;
+        System.out.println(payableAmount);
     }
         
     if(isCouponApplied){
