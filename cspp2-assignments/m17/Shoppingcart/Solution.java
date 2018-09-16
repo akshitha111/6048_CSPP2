@@ -123,7 +123,7 @@ class ShoppingCart {
             for(int j =0 ; j < catalog.size(); j++) {
                  if(cart.get(i).getProductName().equals(catalog.get(j).getProductName())){
                     
-                    payableAmount = (cart.get(i).getQuantity() * catalog.get(j).getUnitPrice());
+                    payableAmount += (cart.get(i).getQuantity() * catalog.get(j).getUnitPrice());
                    
                 }       
     }
