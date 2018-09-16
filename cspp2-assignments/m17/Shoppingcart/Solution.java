@@ -157,8 +157,10 @@ class ShoppingCart {
         System.out.println("Name" + "   quantity" + "   Price");
         for(int i = 0; i < cart.size(); i++) {
             System.out.println(cart.get(i).getProductName() + " " + cart.get(i).getQuantity());
+            if(cart.get(i).getProductName().equals(catalog.get(i).getProductName())){
             System.out.print(catalog.get(i).getUnitPrice());            
         }
+    }
         System.out.println("Total:" +getTotalAmount());
         //System.out.println("Disc%:" + getTotalAmount() - getDiscount());
         System.out.println("Tax:" + getTax());
