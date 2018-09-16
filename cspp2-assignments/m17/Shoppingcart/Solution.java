@@ -149,7 +149,7 @@ class ShoppingCart {
             }
             isCouponApplied = true;
         
-        if(!isCouponApplied){
+        //if(!isCouponApplied){
         System.out.println("kk");
         double disc = totalAmount * couponCode;
          System.out.println("Total:" +getTotalAmount());
@@ -157,7 +157,7 @@ class ShoppingCart {
         this.payableAmount = getPayableAmount() * couponCode;
         System.out.println(payableAmount);
     }
-}
+
         
     if(isCouponApplied){
         System.out.println("Total:" +getTotalAmount());
