@@ -38,10 +38,13 @@ class ShoppingCart {
     double totalAmount;
     double payableAmount;
     double disc;
+    boolean isCouponApplied = true;
+    float couponCode;
 
     public ShoppingCart() {
         catalog = new List<Item>();
         cart = new List<Item>();
+        isCouponApplied = false;
         /*totalAmount = 0.0;
         payableAmount = 0.0;
         disc = 0.0;*/
@@ -123,32 +126,28 @@ class ShoppingCart {
         return totalAmount * .15;
     }
 
-    public void applyCoupon(String couponCode) {
-        List<String> validCoupons = new List<String>();
-        String[] vC= {"IND10", "IND20", "IND30", "IND50"};
-        validCoupons.addAll(vC);
-        if(validCoupons.contains(couponCode)) {
-            if(couponCode.contains("50")) {
-                this.payableAmount -= this.payableAmount * 0.5;
-                disc = 50;
+    public void applyCoupon(final String coupon) {
+
+        if (isCouponApplied) {
+            if (coupon.equals("IND10")) {
+            couponCode = 0.1f;
+            } else if (coupon.equals("IND20")) {
+                couponCode = 0.2f;
+            } else if (coupon.equals("IND30")) {
+                couponCode = 0.3f;
+            } else if (coupon.equals("IND50")) {
+                couponCode = 0.5f;
+            } else {
+                System.out.println("Invalid coupon");
+                return;
             }
-            else if(couponCode.contains("30"))
-            {
-                this.payableAmount -= this.payableAmount * 0.3;
-                disc = 30;
-            }
-            else if(couponCode.contains("20"))
-            {
-                this.payableAmount -= this.payableAmount * 0.2;
-                disc = 20;
-            }
-            else if(couponCode.contains("10")) {
-                this.payableAmount -= this.payableAmount * 0.1;
-                disc = 10;
-            }
-        }   
+            isCouponApplied = true;
+        }
+    
     }
+
     public double getDiscount() {
+     
         return getTotalAmount() * (disc/100);
  
     }
