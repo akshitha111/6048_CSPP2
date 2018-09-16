@@ -143,7 +143,7 @@ class ShoppingCart {
             } else if (coupon.equals("IND30")) {
                 couponCode = 0.3f;
             } else if (coupon.equals("IND50")) {
-                System.out.println("kk");
+                //System.out.println("kk");
                 couponCode = 0.5f;
             } else {
                 System.out.println("Invalid coupon");
@@ -151,19 +151,19 @@ class ShoppingCart {
             }
            // isCouponApplied = true;
             this.payableAmount = getPayableAmount() * couponCode;
-            System.out.println(payableAmount);
+            System.out.println(this.payableAmount);
         
         
         
     
 
         
-    if(isCouponApplied){
+    /*if(isCouponApplied){
         System.out.println("Total:" +getTotalAmount());
         System.out.println("Disc%:" + 0.0);
         System.out.println("Tax:" + getTotalAmount() * 0.15);
         System.out.println("Payable amount: " + getPayableAmount());
-    }
+    }*/
     
     }
 
