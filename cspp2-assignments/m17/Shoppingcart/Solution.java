@@ -44,7 +44,7 @@ class ShoppingCart {
     public ShoppingCart() {
         catalog = new List<Item>();
         cart = new List<Item>();
-        isCouponApplied = false;
+        isCouponApplied = true;
         /*totalAmount = 0.0;
         payableAmount = 0.0;
         disc = 0.0;*/
