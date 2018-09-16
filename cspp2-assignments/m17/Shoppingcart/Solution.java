@@ -153,29 +153,21 @@ class ShoppingCart {
     }
 
     public void printInvoice() {
-        //public void printInvoice() {
-        System.out.println("Name   quantity   Price");
-        for (int i = 0; i < cart.size(); i++) {
-            System.out.println(cart.get(i));
+        System.out.println("Name" + "   quantity" + "   Price");
+        for(int i = 0; i < cart.size(); i++) {
+            
+            System.out.print(cart.get(i).getProductName() + " " + cart.get(i).getQuantity() + " ");
+            for(int j=0;j<catalog.size();j++){
+            if(cart.get(i).getProductName().equals(catalog.get(j).getProductName())){
+            System.out.println(catalog.get(j).getUnitPrice());     
+            }       
         }
-        System.out.println("Total:" + getTotalAmount());
-        if (!isCouponApplied) {
-            double totalAmount = getTotalAmount();
-            double disc = totalAmount * couponCode;
-            System.out.println("Disc%:" + disc);
-            totalAmount = totalAmount - disc;
-            //float tax = (totalAmount * 15) / 100;
-            //System.out.println("Tax:" + tax);
-            //totalAmount = totalAmount + tax;
-            System.out.println("Payable amount: " + totalAmount);
-        } else {
-            double totalAmount = getTotalAmount();
-            System.out.println("Disc%:" + 0.0);
-            //float tax = (totalAmount * 15) / 100;
-            //System.out.println("Tax:" + tax);
-            //totalAmount = totalAmount + tax;
-            System.out.println("Payable amount: " + totalAmount);
-        }
+    }
+    if(!isCouponApplied)
+        System.out.println("Total:" +getTotalAmount());
+        System.out.println("Disc%:" + 0);
+        System.out.println("Tax:" + getTax());
+        System.out.println("PayableAmount:" + getPayableAmount());
     }
 }
 
