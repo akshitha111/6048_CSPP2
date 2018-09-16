@@ -38,7 +38,7 @@ class ShoppingCart {
     double totalAmount;
     double payableAmount;
     double disc;
-    boolean isCouponApplied = true;
+    boolean isCouponApplied;
     float couponCode;
 
     public ShoppingCart() {
