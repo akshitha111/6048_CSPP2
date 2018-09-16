@@ -146,11 +146,11 @@ class ShoppingCart {
     
     }
 
-    public double getDiscount() {
+    /*public double getDiscount() {
      
         return getTotalAmount() * (disc/100);
  
-    }
+    }*/
 
     public void printInvoice() {
         System.out.println("Name" + "   quantity" + "   Price");
@@ -165,6 +165,7 @@ class ShoppingCart {
     }
     if(!isCouponApplied){
         payableAmount = payableAmount * couponCode;
+        System.out.println(payableAmount);
     }
         
     if(isCouponApplied){
@@ -176,6 +177,7 @@ class ShoppingCart {
     
 }
 }
+
 
 class Solution {
     private Solution() {
