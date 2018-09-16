@@ -141,7 +141,7 @@ class ShoppingCart {
                 System.out.println("Invalid coupon");
                 return;
             }
-            //isCouponApplied = true;
+            isCouponApplied = true;
         }
     
     }
