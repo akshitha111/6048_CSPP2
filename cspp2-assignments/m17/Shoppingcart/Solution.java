@@ -156,11 +156,11 @@ class ShoppingCart {
     public void printInvoice() {
         System.out.println("Name" + "   quantity" + "   Price");
         for(int i = 0; i < cart.size(); i++) {
-            for(int j=0;j<catalog.size();j++){
-            System.out.println(cart.get(i).getProductName() + " " + cart.get(i).getQuantity());
             
+            System.out.println(cart.get(i).getProductName() + " " + cart.get(i).getQuantity());
+            for(int j=0;j<catalog.size();j++){
             if(cart.get(i).getProductName().equals(catalog.get(j).getProductName())){
-            System.out.print(catalog.get(j).getUnitPrice());     
+            System.out.println(catalog.get(j).getUnitPrice());     
             }       
         }
     }
