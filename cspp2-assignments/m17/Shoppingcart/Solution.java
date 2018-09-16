@@ -118,13 +118,13 @@ class ShoppingCart {
 }
 
     public double getPayableAmount() {
-        return this.payableAmount = totalAmount + getTax(); 
+        return this.payableAmount = totalAmount + (totalAmount * 0.15); 
         //return payableAmount;
         
     }
-    public double getTax() {
+    /*public double getTax() {
         return totalAmount * .15;
-    }
+    }*/
 
     public void applyCoupon(final String coupon) {
 
@@ -171,7 +171,7 @@ class ShoppingCart {
     if(isCouponApplied){
         System.out.println("Total:" +getTotalAmount());
         System.out.println("Disc%:" + 0.0);
-        System.out.println("Tax:" + getTax());
+        System.out.println("Tax:" + totalAmount * 0.15);
         System.out.println("Payable amount: " + getPayableAmount());
     }
     
