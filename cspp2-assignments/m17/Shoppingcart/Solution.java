@@ -134,7 +134,7 @@ class ShoppingCart {
 
     public void applyCoupon(final String coupon) {
 
-        if (isCouponApplied) {
+        if (!isCouponApplied) {
             if (coupon.equals("IND10")) {
             couponCode = 0.1f;
             } else if (coupon.equals("IND20")) {
