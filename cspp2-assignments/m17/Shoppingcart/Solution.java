@@ -147,15 +147,12 @@ class ShoppingCart {
                 System.out.println("Invalid coupon");
                 return;
             }
-            isCouponApplied = true;
+           // isCouponApplied = true;
+            this.payableAmount = getPayableAmount() * couponCode;
+            System.out.println(payableAmount);
         
-        //if(!isCouponApplied){
-        System.out.println("kk");
-        double disc = totalAmount * couponCode;
-         System.out.println("Total:" +getTotalAmount());
-         System.out.println("Disc%:" + disc);
-        this.payableAmount = getPayableAmount() * couponCode;
-        System.out.println(payableAmount);
+        
+        
     }
 
         
