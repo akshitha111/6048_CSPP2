@@ -143,6 +143,7 @@ class ShoppingCart {
             } else if (coupon.equals("IND30")) {
                 couponCode = 0.3f;
             } else if (coupon.equals("IND50")) {
+                System.out.println("kk");
                 couponCode = 0.5f;
             } else {
                 System.out.println("Invalid coupon");
