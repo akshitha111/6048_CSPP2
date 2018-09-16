@@ -163,12 +163,18 @@ class ShoppingCart {
             }       
         }
     }
-    if(!isCouponApplied)
+    if(!isCouponApplied){
         System.out.println("Total:" +getTotalAmount());
         System.out.println("Disc%:" + 0.0);
         System.out.println("Tax:" + getTax());
         System.out.println("Payable amount: " + getPayableAmount());
     }
+    if(isCouponApplied){
+        totalAmount = getTotalAmount();
+        disc = totalAmount * couponCode;
+        System.out.println(disc);
+    }
+}
 }
 
 class Solution {
