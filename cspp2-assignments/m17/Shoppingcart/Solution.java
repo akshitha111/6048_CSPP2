@@ -134,7 +134,7 @@ class ShoppingCart {
 
     public void applyCoupon(final String coupon) {
 
-        if (!isCouponApplied) {
+        if (isCouponApplied) {
             if (coupon.equals("IND10")) {
             couponCode = 0.1f;
             } else if (coupon.equals("IND20")) {
@@ -148,7 +148,7 @@ class ShoppingCart {
                 return;
             }
             isCouponApplied = true;
-        }
+        
         if(!isCouponApplied){
         System.out.println("kk");
         double disc = totalAmount * couponCode;
@@ -157,6 +157,7 @@ class ShoppingCart {
         this.payableAmount = getPayableAmount() * couponCode;
         System.out.println(payableAmount);
     }
+}
         
     if(isCouponApplied){
         System.out.println("Total:" +getTotalAmount());
