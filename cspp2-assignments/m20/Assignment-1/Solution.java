@@ -248,6 +248,7 @@ public final class Solution {
         for (int i = 0; i < q; i++) {
             String sc = scan.nextLine();
             tokens = sc.split(":");
+           // Question ques = new 
             
         }
        
@@ -257,7 +258,7 @@ public final class Solution {
             	throw new Exception("Error! Malformed question");
             }
             if(tokens[0].length() == 0) {
-            	throw new Exception("Error! Malformed question");
+            	throw new Exception("Quiz does not have questions");
             }
             if(choices.length < 2) {
             	throw new Exception(tokens[0] + " " + "does not have enough answer choices");
