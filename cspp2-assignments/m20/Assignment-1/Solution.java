@@ -288,10 +288,17 @@ public final class Solution {
         // write your code here to display the quiz questions on the console.
         // read the user responses from the console using scanner object.
         // store the user respone in the question object
-        for(int i = 0; i < q; i++) {
+        String[] tokens = new String[q];
+        for (int i = 0; i < q; i++) {
+            String sc = scan.nextLine();
+            tokens = sc.split(":");
+        for( i = 0; i < q; i++) {
+        	System.out.println(tokens[0]);
+        	
 
         }
     }
+}
     /**
      * Displays the score report.
      *
