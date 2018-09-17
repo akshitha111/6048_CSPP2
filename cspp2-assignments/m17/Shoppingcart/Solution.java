@@ -1,38 +1,35 @@
-import java.util.*;
+import java.util.Scanner;
 
 class Item {
     private String productName;
     private int quantity;
     private double unitPrice;
-    Item(String pn, int q, double up) {
+    Item(final String pn, final int q, final double up) {
         this.productName = pn;
         this.quantity = q;
         this.unitPrice = up;
     }
-    /*public Item(String pn, item q) {
-        this.productName = pn;
-        this.quantity = q;
-    }*/
     public String getProductName() {
         return this.productName;
-    } 
+    }
     public int getQuantity() {
         return this.quantity;
     }
     public double getUnitPrice() {
         return this.unitPrice;
     }
-    public void decreaseQuantity(int quantity) {
-        this.quantity -= quantity;
+    public void decreaseQuantity(final int quant) {
+        this.quantity -= quant;
 
     }
 
-    public void increaseQuantity(int quantity) {
-        this.quantity += quantity;
+    public void increaseQuantity(final int quant) {
+        this.quantity += quant;
 
     }
     public String toString() {
-        return this.getProductName() + " " + this.getQuantity() + " " + this.getUnitPrice();
+        return this.getProductName() + " "
+         + this.getQuantity() + " " + this.getUnitPrice();
     }
 }
 
@@ -52,24 +49,17 @@ class ShoppingCart {
         cart = new List<Item>();
         isCouponApplied = true;
         couponCode = 0.0;
-        /*totalAmount = 0.0;
-        payableAmount = 0.0;
-        disc = 0.0;*/
-
     }
-
-
-    public void addToCatalog(Item item) {
+    public void addToCatalog(final Item item) {
         catalog.add(item);
-
     }
 
-    public void addToCart(Item item) {
+    public void addToCart(final Item item) {
         for(int i = 0; i < catalog.size(); i++) {
             if(catalog.get(i).getProductName().equals(item.getProductName())) {
-                if(catalog.get(i).getQuantity() >= item.getQuantity()){
-                    for(int j = 0; j < cart.size(); j++){
-                        if(item.getProductName().equals(cart.get(j).getProductName())){
+                if(catalog.get(i).getQuantity() >= item.getQuantity()) {
+                    for(int j = 0; j < cart.size(); j++) {
+                        if(item.getProductName().equals(cart.get(j).getProductName())) {
                             cart.get(j).increaseQuantity(item.getQuantity());
                             return;
                         }
@@ -83,9 +73,9 @@ class ShoppingCart {
 
     }
 
-    public void removeFromCart(Item item) {
-        for(int i = 0; i < cart.size(); i++){
-        if(cart.get(i).getProductName().equals(item.getProductName())){
+    public void removeFromCart(final Item item) {
+        for(int i = 0; i < cart.size(); i++) {
+        if(cart.get(i).getProductName().equals(item.getProductName())) {
             if(cart.get(i).getQuantity() == item.getQuantity()){
             cart.remove(i);
         }
@@ -97,7 +87,6 @@ class ShoppingCart {
 }
 
     public void showCart() {
-        //if()
         for(int i = 0; i < cart.size(); i++) {
             Item item = cart.get(i);
             System.out.println(cart.get(i).getProductName() + " " + cart.get(i).getQuantity());
@@ -116,19 +105,12 @@ class ShoppingCart {
         totalAmount = 0;
         for(int i = 0; i < cart.size(); i++) {
             for(int j =0 ; j < catalog.size(); j++) {
-                if(cart.get(i).getProductName().equals(catalog.get(j).getProductName())){
+                if(cart.get(i).getProductName().equals(catalog.get(j).getProductName())) {
                     totalAmount = totalAmount + (cart.get(i).getQuantity() * catalog.get(j).getUnitPrice());
                 }
             }
-            //totalAmount = totalAmount + (cart.get(i).getQuantity() * catalog.get(i).getUnitPrice());
-            /*for(int j = 0; j < catalog.size(); j++) {
-                if(cart.get(i).getProductName().equals(catalog.get(j).getProductName()))
-                totalAmount += cart.get(i).getQuantity() * catalog.get(j).getUnitPrice();
-        }*/
-    //}
     }
     return totalAmount;
-
 }
 
     public double getPayableAmount() {
@@ -178,26 +160,6 @@ class ShoppingCart {
             else
                 return (getTotalAmount() - (getTotalAmount()*couponCode)) * 0.15;
         }
-        
-        
-        
-    
-
-        
-    /*if(isCouponApplied){
-        System.out.println("Total:" +getTotalAmount());
-        System.out.println("Disc%:" + 0.0);
-        System.out.println("Tax:" + getTotalAmount() * 0.15);
-        System.out.println("Payable amount: " + getPayableAmount());
-    }*/
-    
-    
-
-    /*public double getDiscount() {
-     
-        return getTotalAmount() * (disc/100);
- 
-    }*/
 
     public void printInvoice() {
         System.out.println("Name" + "   quantity" + "   Price");
@@ -221,8 +183,6 @@ class ShoppingCart {
     
 }
 }
-
-
 
 class Solution {
     private Solution() {
@@ -252,14 +212,12 @@ public static void main(final String[] args) {
                     String[] c2 = tokens[1].split(",");
                     sc.addToCart(new Item(c2[0],
                         Integer.parseInt(c2[1]), 0.0f));
-                    //sc.addToCart(it);
                 break;
 
                 case "remove":
                     String[] c3 = tokens[1].split(",");
                     sc.removeFromCart(new Item(c3[0],
                         Integer.parseInt(c3[1]), 0.0f));
-                    //sc.remove(it);
                 break;
                 case "show":
                     sc.showCart();
