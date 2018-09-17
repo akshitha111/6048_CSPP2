@@ -39,13 +39,13 @@ class ShoppingCart {
     double payableAmount;
     double disc;
     boolean isCouponApplied;
-    float couponCode;
+    double couponCode;
 
     public ShoppingCart() {
         catalog = new List<Item>();
         cart = new List<Item>();
         isCouponApplied = true;
-        couponCode = 1.0f;
+        couponCode = 1.0;
         /*totalAmount = 0.0;
         payableAmount = 0.0;
         disc = 0.0;*/
@@ -140,13 +140,13 @@ class ShoppingCart {
         
             if (coupon.equals("IND10")) {
                 //System.out.println("kk");
-            couponCode = 0.1f;
+            couponCode = 0.1;
             } else if (coupon.equals("IND20")) {
-                couponCode = 0.2f;
+                couponCode = 0.2;
             } else if (coupon.equals("IND30")) {
-                couponCode = 0.3f;
+                couponCode = 0.3;
             } else if (coupon.equals("IND50")) {
-                couponCode = 0.5f;
+                couponCode = 0.5;
             } else {
                 System.out.println("Invalid coupon");
                 return;
