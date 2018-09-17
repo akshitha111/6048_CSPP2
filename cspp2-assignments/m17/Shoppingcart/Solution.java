@@ -40,6 +40,7 @@ class ShoppingCart {
     double discount;
     boolean isCouponApplied;
     double couponCode;
+    int flag = 0;
 
     public ShoppingCart() {
         catalog = new List<Item>();
@@ -132,15 +133,19 @@ class ShoppingCart {
     public void applyCoupon(final String coupon) {
 
         
-            if (coupon.equals("IND10")) {
+            if (coupon.equals("IND10") && flag == 0) {
                 //System.out.println("kk");
             couponCode = 0.1;
-            } else if (coupon.equals("IND20")) {
+            flag = 1;
+            } else if (coupon.equals("IND20") && flag == 0) {
                 couponCode = 0.2;
-            } else if (coupon.equals("IND30")) {
+                flag = 1;
+            } else if (coupon.equals("IND30") && flag == 0) {
                 couponCode = 0.3;
-            } else if (coupon.equals("IND50")) {
+                flag = 1;
+            } else if (coupon.equals("IND50") && flag == 0) {
                 couponCode = 0.5;
+                flag = 1;
             } else {
                 System.out.println("Invalid coupon");
                 return;
