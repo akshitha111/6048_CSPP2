@@ -253,6 +253,9 @@ public final class Solution {
             if(tokens.length < 5) {
             	throw new Exception("Error! Malformed question");
             }
+            if(tokens[0] == "") {
+            	throw new Exception("Error! Malformed question");
+            }
             if(choices.length < 2) {
             	throw new Exception(tokens[0] + " " + "does not have enough answer choices");
             }
