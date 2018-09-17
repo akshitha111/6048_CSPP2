@@ -45,7 +45,7 @@ class ShoppingCart {
         catalog = new List<Item>();
         cart = new List<Item>();
         isCouponApplied = true;
-        couponCode = 1.0;
+        couponCode = 0.0;
         /*totalAmount = 0.0;
         payableAmount = 0.0;
         disc = 0.0;*/
@@ -121,18 +121,12 @@ class ShoppingCart {
     public double getPayableAmount() {
         if(isCouponApplied){
         payableAmount = 0;
-        for(int i =0; i < cart.size();i++){
-            for(int j =0 ; j < catalog.size(); j++) {
-                 if(cart.get(i).getProductName().equals(catalog.get(j).getProductName())){
-                    
-                    payableAmount += (cart.get(i).getQuantity() * catalog.get(j).getUnitPrice());
-                    payableAmount = getTotalAmount() + (totalAmount * 0.15);
-                   
-                }       
-    }
-        
-    } 
-}return this.payableAmount * couponCode;
+        double discount = getTotalAmount() * couponCode;
+        double total = getTotalAmount() - discount;
+        double tax = (total * 0.15);
+        payableAmount = total + tax;
+        }
+        return this.payableAmount ;
 }
 
     public void applyCoupon(final String coupon) {
