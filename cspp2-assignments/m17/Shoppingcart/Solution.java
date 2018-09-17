@@ -1,54 +1,146 @@
 import java.util.Scanner;
-
+/**
+ * Class for item.
+ */
 class Item {
+    /**
+     * product name.
+     */
     private String productName;
+    /**
+     * quantity of the product.
+     */
     private int quantity;
+    /**
+     * unit price of the product.
+     */
     private double unitPrice;
+    /**
+     * Constructs the object.
+     *
+     * @param      pn    { product name }.
+     * @param      q     quantity.
+     * @param      up    { unit price }.
+     */
     Item(final String pn, final int q, final double up) {
         this.productName = pn;
         this.quantity = q;
         this.unitPrice = up;
     }
+    /**
+     * Gets the product name.
+     *
+     * @return     The product name.
+     */
     public String getProductName() {
         return this.productName;
     }
+    /**
+     * Gets the quantity.
+     *
+     * @return     The quantity.
+     */
     public int getQuantity() {
         return this.quantity;
     }
+    /**
+     * Gets the unit price.
+     *
+     * @return     The unit price.
+     */
     public double getUnitPrice() {
         return this.unitPrice;
     }
+    /**
+     * function for decreasing quantity.
+     *
+     * @param      quant  The quant
+     */
     public void decreaseQuantity(final int quant) {
         this.quantity -= quant;
 
     }
+    /**
+     * function for increasing quantity.
+     *
+     * @param      quant  The quant
+     */
 
     public void increaseQuantity(final int quant) {
         this.quantity += quant;
 
     }
+    /**
+     * function for printing.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         return this.getProductName() + " "
          + this.getQuantity() + " " + this.getUnitPrice();
     }
 }
+/**
+ * Class for shopping cartesian.
+ */
 
 class ShoppingCart {
+    /**
+     * catalog list.
+     */
 
     private List<Item> catalog;
+    /**
+     * cart list.
+     */
     private List<Item> cart;
+    /**
+     * variable for total amount.
+     */
     private double totalAmount;
+    /**
+     * variable for payabale amount.
+     */
     private double payableAmount;
+    /**
+     * variable for discount amount.
+     */
     private double discount;
+    /**
+     * variable to check if coupon applied.
+     */
     private boolean isCouponApplied;
+    /**
+     * variable for coupon code.
+     */
     private double couponCode;
+    /**
+     * flag variable.
+     */
     private int flag = 0;
-
+    /**
+     * tax value.
+     */
     private static final double NUMONE = 0.15;
+    /**
+     * coupon value for coupon 10.
+     */
     private static final double NUMTWO = 0.1;
+    /**
+     * coupon value for coupon 20.
+     */
     private static final double NUMTHREE = 0.2;
+    /**
+     * coupon value for coupon 30.
+     */
     private static final double NUMFOUR = 0.3;
+    /**
+     * coupon value for coupon code 50.
+     */
     private static final double NUMFIVE = 0.5;
+    /**
+     * Constructs the object.
+     */
 
     ShoppingCart() {
         catalog = new List<Item>();
@@ -56,9 +148,19 @@ class ShoppingCart {
         isCouponApplied = true;
         couponCode = 0.0;
     }
+    /**
+     * Adds to catalog.
+     *
+     * @param      item  The item
+     */
     public void addToCatalog(final Item item) {
         catalog.add(item);
     }
+    /**
+     * Adds to cart.
+     *
+     * @param      item  The item
+     */
 
     public void addToCart(final Item item) {
         for (int i = 0; i < catalog.size(); i++) {
@@ -79,6 +181,11 @@ class ShoppingCart {
         }
 
     }
+    /**
+     * Removes a from cart.
+     *
+     * @param      item  The item
+     */
 
     public void removeFromCart(final Item item) {
         for (int i = 0; i < cart.size(); i++) {
@@ -91,6 +198,9 @@ class ShoppingCart {
     }
 }
 }
+/**
+ * Shows the cart.
+ */
 
     public void showCart() {
         for (int i = 0; i < cart.size(); i++) {
@@ -100,6 +210,9 @@ class ShoppingCart {
         }
 
     }
+    /**
+     * Shows the catalog.
+     */
 
     public void showCatalog() {
         for (int i = 0; i < catalog.size(); i++) {
@@ -109,6 +222,11 @@ class ShoppingCart {
         }
 
     }
+    /**
+     * Gets the total amount.
+     *
+     * @return     The total amount.
+     */
 
     public double getTotalAmount() {
         totalAmount = 0;
@@ -123,6 +241,11 @@ class ShoppingCart {
     }
     return totalAmount;
 }
+/**
+ * Gets the payable amount.
+ *
+ * @return     The payable amount.
+ */
 
     public double getPayableAmount() {
         if (isCouponApplied) {
@@ -134,6 +257,11 @@ class ShoppingCart {
         }
         return this.payableAmount;
 }
+/**
+ * function used for applying coupon.
+ *
+ * @param      coupon  The coupon
+ */
 
     public void applyCoupon(final String coupon) {
             if (coupon.equals("IND10") && flag == 0) {
@@ -157,6 +285,11 @@ class ShoppingCart {
                 return;
             }
         }
+        /**
+         * function used to get the tax.
+         *
+         * @return     The double tax.
+         */
 
         public double getTax() {
             if (couponCode == 0.0) {
@@ -166,6 +299,9 @@ class ShoppingCart {
                  - (getTotalAmount() * couponCode)) * NUMONE;
             }
         }
+        /**
+         * function used for printing the invoice.
+         */
 
     public void printInvoice() {
         System.out.println("Name" + "   quantity" + "   Price");
@@ -187,12 +323,20 @@ class ShoppingCart {
     }
 }
 }
+/**
+ * this is a class solution.
+ */
 
 final class Solution {
-    private Solution() {
-        
-    }
-
+    /**
+     * this is a constructor.
+     */
+    private Solution() { }
+    /**
+     * this is a main function.
+     *
+     * @param      args  The arguments
+     */
 public static void main(final String[] args) {
         ShoppingCart sc = new ShoppingCart();
         Scanner scan = new Scanner(System.in);
