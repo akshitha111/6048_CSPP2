@@ -26,6 +26,11 @@ class Item {
         this.quantity -= quantity;
 
     }
+
+    public void increaseQuantity(int quantity) {
+        this.quantity += quantity;
+
+    }
     public String toString() {
         return this.getProductName() + " " + this.getQuantity() + " " + this.getUnitPrice();
     }
@@ -63,6 +68,12 @@ class ShoppingCart {
         for(int i = 0; i < catalog.size(); i++) {
             if(catalog.get(i).getProductName().equals(item.getProductName())) {
                 if(catalog.get(i).getQuantity() >= item.getQuantity()){
+                    for(int j = 0; j < cart.size(); j++){
+                        if(item.getProductName().equals(cart.get(j).getProductName())){
+                            cart.get(j).increaseQuantity(item.getQuantity());
+                            return;
+                        }
+                    }
                     cart.add(item);
                     catalog.get(i).decreaseQuantity(item.getQuantity());
                     return;
@@ -86,6 +97,7 @@ class ShoppingCart {
 }
 
     public void showCart() {
+        //if()
         for(int i = 0; i < cart.size(); i++) {
             Item item = cart.get(i);
             System.out.println(cart.get(i).getProductName() + " " + cart.get(i).getQuantity());
