@@ -246,11 +246,18 @@ public final class Solution {
             String sc = scan.nextLine();
             tokens = sc.split(":");
         }
+        String[] choices = tokens[1].split(",");
             if(q < 1) {
             	throw new Exception("Quiz does not have questions");
             }
             if(tokens.length < 5) {
             	throw new Exception("Error! Malformed question");
+            }
+            if(choices.length < 2) {
+            	throw new Exception(tokens[0] + " " + "does not have enough answer choices");
+            }
+            if(Integer.parseInt(tokens[2]) < 1 || Integer.parseInt(tokens[2]) > choices.length) {
+            	throw new Exception("Error! Correct answer choice number is out of range for" + " " + tokens[0]);
             }
     
 }
