@@ -191,7 +191,7 @@ class ShoppingCart {
         System.out.println("Total:" +getTotalAmount());
         System.out.println("Disc%:" + 0.0);
         System.out.println("Tax:" + getTotalAmount() * 0.15);
-        System.out.println("Payable amount: " + getPayableAmount());
+        System.out.println("Payable amount: " + getPayableAmount() * couponCode);
     }
     
     
