@@ -45,6 +45,7 @@ class ShoppingCart {
         catalog = new List<Item>();
         cart = new List<Item>();
         isCouponApplied = true;
+        couponCode = 1.0f;
         /*totalAmount = 0.0;
         payableAmount = 0.0;
         disc = 0.0;*/
@@ -131,14 +132,14 @@ class ShoppingCart {
     }
         
     } 
-}return this.payableAmount;
+}return this.payableAmount * couponCode;
 }
 
     public void applyCoupon(final String coupon) {
 
         
             if (coupon.equals("IND10")) {
-                System.out.println("kk");
+                //System.out.println("kk");
             couponCode = 0.1f;
             } else if (coupon.equals("IND20")) {
                 couponCode = 0.2f;
@@ -151,7 +152,7 @@ class ShoppingCart {
                 return;
             }
            // isCouponApplied = true;
-            this.payableAmount = getPayableAmount() * couponCode;
+            this.payableAmount = getPayableAmount();
            System.out.println(this.payableAmount);
             
         }
