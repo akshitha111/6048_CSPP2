@@ -266,7 +266,7 @@ public final class Solution {
             	throw new Exception("Invalid penalty for" + " " + tokens[0]);
             }
             else {
-            	throw new Exception(tokens[0] + " " + "are added to the quiz");
+            	throw new Exception(q + " " + "are added to the quiz");
             }
     
 }
