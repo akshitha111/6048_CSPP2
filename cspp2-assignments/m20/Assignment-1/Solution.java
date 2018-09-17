@@ -265,6 +265,9 @@ public final class Solution {
             if(Integer.parseInt(tokens[4]) > 0) {
             	throw new Exception("Invalid penalty for" + " " + tokens[0]);
             }
+            else {
+            	throw new Exception(tokens[0] + " " + "are added to the quiz");
+            }
     
 }
     /**
