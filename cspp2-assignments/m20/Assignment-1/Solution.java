@@ -335,7 +335,7 @@ public final class Solution {
                            + quiz.getQuestion(i).getPenalty());
       }
     }
-    //System.out.println("Total Score: " + score);
+    System.out.println("Total Score: " + score);
   }
 }
 
