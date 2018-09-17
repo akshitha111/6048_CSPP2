@@ -189,7 +189,7 @@ class ShoppingCart {
 }
 
 final class Solution {
-   
+    
     private Solution() {
 
     }
