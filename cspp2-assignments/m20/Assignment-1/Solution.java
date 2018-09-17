@@ -207,7 +207,7 @@ public final class Solution {
                 System.out.println("| Load Questions |");
                 System.out.println("|----------------|");
                 loadQuestions(s, q, Integer.parseInt(tokens[1]));
-                
+
             } catch(Exception e) {
             		System.out.println(e.getMessage());
             }
@@ -254,7 +254,7 @@ public final class Solution {
             if(tokens.length < 5) {
             	throw new Exception("Error! Malformed question");
             }
-            if(tokens[0] == " ") {
+            if(tokens[0].length() == 0) {
             	throw new Exception("Error! Malformed question");
             }
             if(choices.length < 2) {
