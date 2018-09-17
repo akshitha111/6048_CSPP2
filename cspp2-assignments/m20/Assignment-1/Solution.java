@@ -120,6 +120,7 @@ class Question {
     public String toString() {
         String s = "";
         return s;
+
     }
 }
 /**
@@ -255,7 +256,7 @@ public final class Solution {
         String[] choices = tokens[1].split(",");
 
             
-            if(tokens.length < 5) {
+            if(tokens.length < 5 || tokens[0].length() <=0 || tokens[1].length() <=0 || tokens[2].length() <=0 || tokens[3].length() <=0 || tokens[4].length() <=0) {
             	throw new Exception("Error! Malformed question");
             }
             if(q < 1) {
@@ -270,7 +271,7 @@ public final class Solution {
             if(Integer.parseInt(tokens[2]) < 1 || Integer.parseInt(tokens[2]) > choices.length) {
             	throw new Exception("Error! Correct answer choice number is out of range for" + " " + tokens[0]);
             }
-            if(Integer.parseInt(tokens[3]) < 0) {
+            if(Integer.parseInt(tokens[3]) <= 0) {
             	throw new Exception("Invalid max marks for" + " " + tokens[0]);
             }
             if(Integer.parseInt(tokens[4]) > 0) {
@@ -279,6 +280,7 @@ public final class Solution {
             else {
             	throw new Exception(q + " " + "are added to the quiz");
             }
+
     
 }
 
@@ -294,6 +296,7 @@ public final class Solution {
         // write your code here to display the quiz questions on the console.
         // read the user responses from the console using scanner object.
         // store the user respone in the question object
+       
         
 }
     /**
