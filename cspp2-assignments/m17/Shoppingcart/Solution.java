@@ -37,7 +37,7 @@ class ShoppingCart {
     private List<Item> cart;
     double totalAmount;
     double payableAmount;
-    double disc;
+    double discount;
     boolean isCouponApplied;
     double couponCode;
 
@@ -121,7 +121,7 @@ class ShoppingCart {
     public double getPayableAmount() {
         if(isCouponApplied){
         payableAmount = 0;
-        double discount = getTotalAmount() * couponCode;
+        discount = getTotalAmount() * couponCode;
         double total = getTotalAmount() - discount;
         double tax = (total * 0.15);
         payableAmount = total + tax;
@@ -152,7 +152,7 @@ class ShoppingCart {
         }
 
         public double getTax(){
-            if(couponCode == 1.0)
+            if(couponCode == 0.0)
                 return getTotalAmount()*0.15;
             else
                 return (getTotalAmount() - (getTotalAmount()*couponCode)) * 0.15;
@@ -191,7 +191,7 @@ class ShoppingCart {
     }
      if(isCouponApplied){
         System.out.println("Total:" +getTotalAmount());
-        System.out.println("Disc%:" + (getTotalAmount() - (getTotalAmount()*couponCode)));
+        System.out.println("Disc%:" + discount);
         // System.out.println();
         System.out.println("Tax:" + getTax());
         System.out.println("Payable amount: " + getPayableAmount() );
