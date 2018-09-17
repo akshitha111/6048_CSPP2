@@ -37,12 +37,12 @@ class ShoppingCart {
 
     private List<Item> catalog;
     private List<Item> cart;
-    double totalAmount;
-    double payableAmount;
-    double discount;
-    boolean isCouponApplied;
-    double couponCode;
-    int flag = 0;
+    private double totalAmount;
+    private double payableAmount;
+    private double discount;
+    private boolean isCouponApplied;
+    private double couponCode;
+    private int flag = 0;
 
     public ShoppingCart() {
         catalog = new List<Item>();
