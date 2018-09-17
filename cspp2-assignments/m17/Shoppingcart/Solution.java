@@ -150,7 +150,7 @@ class ShoppingCart {
                 couponCode = 0.5;
                 flag = 1;
                 return;
-            } else {
+            } else if (flag == 0) {
                 System.out.println("Invalid coupon");
                 return;
             }
