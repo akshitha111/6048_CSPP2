@@ -248,7 +248,7 @@ public final class Solution {
             tokens = sc.split(":");
         }
         String[] choices = tokens[1].split(",");
-            if(q <= 0) {
+            if(q < 4) {
             	throw new Exception("Quiz does not have questions");
             }
             if(tokens.length < 5) {
