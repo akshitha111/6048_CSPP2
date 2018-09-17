@@ -259,6 +259,12 @@ public final class Solution {
             if(Integer.parseInt(tokens[2]) < 1 || Integer.parseInt(tokens[2]) > choices.length) {
             	throw new Exception("Error! Correct answer choice number is out of range for" + " " + tokens[0]);
             }
+            if(Integer.parseInt(tokens[3]) < 0) {
+            	throw new Exception("Invalid max marks for" + " " + tokens[0]);
+            }
+            if(Integer.parseInt(tokens[4]) > 0) {
+            	throw new Exception("Invalid penalty for" + " " + tokens[0]);
+            }
     
 }
     /**
