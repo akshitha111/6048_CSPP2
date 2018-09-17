@@ -137,15 +137,19 @@ class ShoppingCart {
                 //System.out.println("kk");
             couponCode = 0.1;
             flag = 1;
+            return;
             } else if (coupon.equals("IND20") && flag == 0) {
                 couponCode = 0.2;
                 flag = 1;
+                return;
             } else if (coupon.equals("IND30") && flag == 0) {
                 couponCode = 0.3;
                 flag = 1;
+                return;
             } else if (coupon.equals("IND50") && flag == 0) {
                 couponCode = 0.5;
                 flag = 1;
+                return;
             } else {
                 System.out.println("Invalid coupon");
                 return;
