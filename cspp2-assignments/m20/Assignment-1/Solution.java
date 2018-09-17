@@ -202,10 +202,14 @@ public final class Solution {
               // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
                 case "LOAD_QUESTIONS":
+                try {
                 System.out.println("|----------------|");
                 System.out.println("| Load Questions |");
                 System.out.println("|----------------|");
                 loadQuestions(s, q, Integer.parseInt(tokens[1]));
+            } catch(Exception e) {
+            		System.out.println(e.getMessage());
+            }
                 break;
                 case "START_QUIZ":
                 System.out.println("|------------|");
@@ -233,13 +237,16 @@ public final class Solution {
      *
      */
     public static void loadQuestions(final Scanner scan,
-        final Quiz quiz, final int q) {
+        final Quiz quiz, final int q) throws Exception {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
         String[] tokens = new String[q];
         for (int i = 0; i < q; i++) {
             String sc = scan.nextLine();
+            if(q == 0) {
+            	throw new Exception("Quiz does not have questions");
+            }
     }
 }
     /**
