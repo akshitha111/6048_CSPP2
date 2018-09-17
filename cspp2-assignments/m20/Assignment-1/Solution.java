@@ -177,7 +177,7 @@ class Quiz {
  * Solution class for code-eval.
  */
 public final class Solution {
-	boolean loadQuestions = true;
+	
      /**
      * Constructs the object.
      */
@@ -244,14 +244,13 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
-        boolean loadQuestions = false;
         String[] tokens = new String[q];
         for (int i = 0; i < q; i++) {
             String sc = scan.nextLine();
             tokens = sc.split(":");
             
         }
-        if(loadQuestions) {
+       
         String[] choices = tokens[1].split(",");
             
             if(tokens.length < 5) {
@@ -277,7 +276,7 @@ public final class Solution {
             }
     
 }
-}
+
     /**
      * Starts a quiz.
      *
@@ -291,16 +290,6 @@ public final class Solution {
         // read the user responses from the console using scanner object.
         // store the user respone in the question object
         
-        String[] tokens = new String[q];
-        for (int i = 0; i < q; i++) {
-            String sc = scan.nextLine();
-            tokens = sc.split(":");
-        for( i = 0; i < q; i++) {
-        	System.out.println(tokens[0]);
-        	
-
-        }
-    }
 }
     /**
      * Displays the score report.
