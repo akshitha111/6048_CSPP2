@@ -247,11 +247,12 @@ public final class Solution {
         for (int i = 0; i < q; i++) {
             String sc = scan.nextLine();
             tokens = sc.split(":");
-        }
-        String[] choices = tokens[1].split(",");
-            if(tokens.length == 0) {
+            if(q < 1) {
             	throw new Exception("Quiz does not have questions");
             }
+        }
+        String[] choices = tokens[1].split(",");
+            
             if(tokens.length < 5) {
             	throw new Exception("Error! Malformed question");
             }
@@ -287,6 +288,9 @@ public final class Solution {
         // write your code here to display the quiz questions on the console.
         // read the user responses from the console using scanner object.
         // store the user respone in the question object
+        for(int i = 0; i < q; i++) {
+
+        }
     }
     /**
      * Displays the score report.
