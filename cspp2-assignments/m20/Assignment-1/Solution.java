@@ -244,6 +244,7 @@ public final class Solution {
         String[] tokens = new String[q];
         for (int i = 0; i < q; i++) {
             String sc = scan.nextLine();
+            tokens = sc.split(":");
             if(q == 0) {
             	throw new Exception("Quiz does not have questions");
             }
