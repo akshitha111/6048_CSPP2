@@ -249,6 +249,9 @@ public final class Solution {
             if(q < 1) {
             	throw new Exception("Quiz does not have questions");
             }
+            if(tokens.length < 5) {
+            	throw new Exception("Error! Malformed question");
+            }
     
 }
     /**
