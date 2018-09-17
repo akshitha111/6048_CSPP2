@@ -152,9 +152,16 @@ class ShoppingCart {
                 return;
             }
            // isCouponApplied = true;
-            this.payableAmount = getPayableAmount();
-           System.out.println(this.payableAmount);
+            // this.payableAmount = getPayableAmount();
+           //System.out.println(this.payableAmount);
             
+        }
+
+        public double getTax(){
+            if(couponCode == 1.0)
+                return getTotalAmount()*0.15;
+            else
+                return (getTotalAmount() - (getTotalAmount()*couponCode)) * 0.15;
         }
         
         
@@ -190,9 +197,10 @@ class ShoppingCart {
     }
      if(isCouponApplied){
         System.out.println("Total:" +getTotalAmount());
-        System.out.println("Disc%:" + 0.0);
-        System.out.println("Tax:" + getTotalAmount() * 0.15);
-        System.out.println("Payable amount: " + getPayableAmount() * couponCode);
+        System.out.println("Disc%:" + (getTotalAmount() - (getTotalAmount()*couponCode)));
+        // System.out.println();
+        System.out.println("Tax:" + getTax());
+        System.out.println("Payable amount: " + getPayableAmount() );
     }
     
     
