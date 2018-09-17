@@ -43,8 +43,12 @@ class ShoppingCart {
     private boolean isCouponApplied;
     private double couponCode;
     private int flag = 0;
-     private static final double NUMONE = 0.15;
+
+    private static final double NUMONE = 0.15;
     private static final double NUMTWO = 0.1;
+    private static final double NUMTHREE = 0.2;
+    private static final double NUMFOUR = 0.3;
+    private static final double NUMFIVE = 0.5;
 
     ShoppingCart() {
         catalog = new List<Item>();
@@ -137,15 +141,15 @@ class ShoppingCart {
             flag = 1;
             return;
             } else if (coupon.equals("IND20") && flag == 0) {
-                couponCode = 0.2;
+                couponCode = NUMTHREE;
                 flag = 1;
                 return;
             } else if (coupon.equals("IND30") && flag == 0) {
-                couponCode = 0.3;
+                couponCode = NUMFOUR;
                 flag = 1;
                 return;
             } else if (coupon.equals("IND50") && flag == 0) {
-                couponCode = 0.5;
+                couponCode = NUMFIVE;
                 flag = 1;
                 return;
             } else if (flag == 0) {
