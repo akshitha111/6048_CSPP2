@@ -13,7 +13,7 @@ class BagOfWords {
 		this.text2 = t2;
 	}
 
-public static String FileToString(File f) {
+public static String fileToString(File f) {
 	String str = "";
 	try {
 	Scanner sc = new Scanner(new FileReader(f));
@@ -37,8 +37,11 @@ public static Map removeWords(String s1) {
 		if(!map.containsKey(tokens[i])) {
 			map.put(tokens[i],1);
 		}else {
-			map.put((tokens[i]),map.get(tokens[i] + 1));
+			map.put((tokens[i]),map.get(tokens[i])+1);
 		}
+		// System.out.println(tokens[i]);
+		// System.out.println(map.toString());
+
 	}return map;
 }
 
@@ -51,6 +54,8 @@ public static int compareText(String s1, String s2) {
 	double secondSum = 0;
 	Map<String,Integer> list1 = removeWords(s1);
 	Map<String,Integer> list2 = removeWords(s2);
+	/*System.out.println(list1.toString());
+	System.out.println(list2.toString());*/
 	for(String e : list1.keySet()) {
 		for(String item : list2.keySet()) {
 			if (e.equals(item)) {
@@ -83,29 +88,29 @@ class Solution {
 		String inputFile = sc.nextLine();
 		File folder = new File(inputFile);
 		File[] listOfFiles = folder.listFiles();
+		System.out.println(Arrays.toString(listOfFiles));
 		int length = listOfFiles.length;
 		int[][] matrix = new int[length][length];
 		for (int i = 0; i < length; i++) {
 			for (int j = 0; j < length; j++) {
-				matrix[i][j] = BagOfWords.compareText(BagOfWords.FileToString(listOfFiles[i]),BagOfWords.FileToString(listOfFiles[j]));
+				matrix[i][j] = BagOfWords.compareText(BagOfWords.fileToString(listOfFiles[i]),BagOfWords.fileToString(listOfFiles[j]));
 			}
-		}System.out.println("       \t");
+		}System.out.println("      \t");
 			for (int i = 0; i < listOfFiles.length-1; i++) {
 				System.out.print("\t" + listOfFiles[i].getName());
 			}
 			System.out.println("\t" + listOfFiles[length-1].getName());
 			for(int i = 0; i < length; i++) {
-				System.out.println(listOfFiles[i].getName() + "\t");
+				System.out.print(listOfFiles[i].getName() + "\t");
 			for (int j = 0; j < length; j++) {
-				System.out.print(matrix[i][j] + " 	");
+				System.out.print(matrix[i][j] + "		");
 			}
 			System.out.println();
 		}
 	}
 	
 	 catch(Exception e) {
-		//System.out.println("empty directory");
-		System.out.println(e.getStackTrace());
+		System.out.println("empty directory");
 	}
 	}
 
