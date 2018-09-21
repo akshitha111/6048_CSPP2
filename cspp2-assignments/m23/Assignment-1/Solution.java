@@ -13,7 +13,7 @@ class BagOfWords {
 		this.text2 = t2;
 	}
 
-public String FileToString(File f) {
+public static String FileToString(File f) {
 	String str = "";
 	try {
 	Scanner sc = new Scanner(new FileReader(f));
@@ -29,7 +29,7 @@ public String FileToString(File f) {
 }
 
 
-public Map removeWords(String s1) {
+public static Map removeWords(String s1) {
 	s1 = s1.toLowerCase();
 	String[] tokens = s1.replaceAll("[^A-Za-z \\s]","").split(" ");
 	Map<String, Integer> map = new HashMap<>();
@@ -44,7 +44,7 @@ public Map removeWords(String s1) {
 
 
 
-public int compareText(String s1, String s2) {
+public static int compareText(String s1, String s2) {
 	double numerator = 0;
 	double denominator = 0;
 	double firstSum = 0;
@@ -87,7 +87,7 @@ class Solution {
 		int[][] matrix = new int[length][length];
 		for (int i = 0; i < length; i++) {
 			for (int j = 0; j < length; j++) {
-				matrix[i][j] = b.compareText(b.FileToString(listOfFiles[i]),b.FileToString(listOfFiles[j]));
+				matrix[i][j] = BagOfWords.compareText(BagOfWords.FileToString(listOfFiles[i]),BagOfWords.FileToString(listOfFiles[j]));
 			}System.out.println("       \t");
 			for ( i = 0; i < listOfFiles.length-1; i++) {
 				System.out.print("\t" + listOfFiles[i].getName());
@@ -103,4 +103,5 @@ class Solution {
 		//System.out.println("empty directory");
 	}
 	}
+
 }
