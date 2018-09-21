@@ -99,7 +99,7 @@ class Solution {
 			for (int i = 0; i < listOfFiles.length-1; i++) {
 				System.out.print("\t" + listOfFiles[i].getName());
 			}
-			System.out.println("\t" + listOfFiles[length-1].getName());
+			System.out.println("\t" + "\t" + listOfFiles[length-1].getName());
 			for(int i = 0; i < length; i++) {
 				System.out.print(listOfFiles[i].getName() + "\t");
 			for (int j = 0; j < length; j++) {
