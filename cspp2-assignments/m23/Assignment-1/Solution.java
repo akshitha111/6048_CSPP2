@@ -78,7 +78,7 @@ class Solution {
 	public static void main(String[] args) {
 		try {
 		Scanner sc = new Scanner(System.in);
-		BagOfWords b = new BagOfWords();
+		//BagOfWords b = new BagOfWords();
 		//while (sc.hasNext()) {
 		String inputFile = sc.nextLine();
 		File folder = new File(inputFile);
@@ -88,18 +88,22 @@ class Solution {
 		for (int i = 0; i < length; i++) {
 			for (int j = 0; j < length; j++) {
 				matrix[i][j] = BagOfWords.compareText(BagOfWords.FileToString(listOfFiles[i]),BagOfWords.FileToString(listOfFiles[j]));
-			}System.out.println("       \t");
-			for ( i = 0; i < listOfFiles.length-1; i++) {
+			}
+		}System.out.println("       \t");
+			for (int i = 0; i < listOfFiles.length-1; i++) {
 				System.out.print("\t" + listOfFiles[i].getName());
 			}
-			System.out.println("\t" + listOfFiles[length-1].getName() + "\t");
+			System.out.println("\t" + listOfFiles[length-1].getName());
+			for(int i = 0; i < length; i++) {
+				System.out.println(listOfFiles[i].getName() + "\t");
 			for (int j = 0; j < length; j++) {
-				System.out.println(matrix[i][j] + " 	");
+				System.out.print(matrix[i][j] + " 	");
 			}
 			System.out.println();
 		}
+	}
 	
-	} catch(Exception e) {
+	 catch(Exception e) {
 		System.out.println("empty directory");
 	}
 	}
