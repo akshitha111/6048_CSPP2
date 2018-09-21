@@ -88,7 +88,7 @@ class Solution {
 		String inputFile = sc.nextLine();
 		File folder = new File(inputFile);
 		File[] listOfFiles = folder.listFiles();
-		System.out.println(Arrays.toString(listOfFiles));
+		//System.out.println(Arrays.toString(listOfFiles));
 		int length = listOfFiles.length;
 		int[][] matrix = new int[length][length];
 		for (int i = 0; i < length; i++) {
