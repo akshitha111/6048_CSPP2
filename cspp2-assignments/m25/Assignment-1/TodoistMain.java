@@ -70,8 +70,9 @@ class Task {
         return this.status;
     }
     public void setStatus(String s) {
-        if(status == null){
+        if(s == null){
             this.status = "Invalid Status";
+            return;
         }
         this.status = s;
     }
