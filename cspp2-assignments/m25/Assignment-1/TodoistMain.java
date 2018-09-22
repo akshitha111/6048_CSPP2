@@ -45,15 +45,17 @@ class Task {
     public void setTimeToComplete(int tc) {
         this.timeToComplete = tc;
     }
-    public boolean getImportant() {
-        return this.important;
+    public String getImportant() {
+        String str1 = "";
+        if(important == true) {
+        str1 += "Important";
+    }
+    
+        return str1;
                 
     }
-    public String setImportant(boolean imp) {
-        if(imp == true)
-        return "Important";
-    else
-        return ("Not Important");
+    public void setImportant(boolean imp) {
+        this.important = imp;
     }
     public String getUrgent() {
         if(urgent) {
