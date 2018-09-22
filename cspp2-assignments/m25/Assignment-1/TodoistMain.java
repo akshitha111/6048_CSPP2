@@ -76,7 +76,7 @@ class Task {
     public String toString() {
         String str = "";
         if(important) {
-         str += title + ", " + assignedTo + ", " + timeToComplete + ", " + important + ", " + urgent + ", " + status;
+         str += title + ", " + assignedTo + ", " + timeToComplete + ", " + "Important" + ", " + urgent + ", " + status;
     }return str;
     }
 
