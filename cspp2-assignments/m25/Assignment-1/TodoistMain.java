@@ -74,11 +74,16 @@ class Task {
     }
     if(!important && urgent) {
         str += title + ", " + assignedTo + ", " + timeToComplete + ", " + "Important" + ", " + "Urgent" + ", " + status;
-    } return str;
+    } 
+    if(timeToComplete < 0) {
+        str = "Invalid timeToComplete " + timeToComplete;
+        }
+        return str;
+    }
     
     }
 
-}
+
 
 
 class Todoist {
@@ -212,9 +217,9 @@ public class TodoistMain {
         boolean important = tokens[4].equals("y");
         boolean urgent = tokens[5].equals("y");
         String status = tokens[6];
-        if(tokens[0] == ""){
+        if(tokens[1] == ""){
             System.out.println("Title not provided");
-            return;
+
         }
         return new Task(
             title, assignedTo, timeToComplete, important, urgent, status);
