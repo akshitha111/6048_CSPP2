@@ -58,7 +58,7 @@ class Task {
         this.important = imp;
     }
     public String getUrgent() {
-        if(urgent) {
+        if(this.urgent) {
             return "urgent";
         }
         return "not urgent";
