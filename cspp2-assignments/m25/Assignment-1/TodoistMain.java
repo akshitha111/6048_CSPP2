@@ -9,7 +9,7 @@ class Task {
     private String assignedTo;
     private int timeToComplete;
     private boolean important = true;
-    private boolean urgent;
+    private boolean urgent = true;
     private String status;
     public Task(String t, String at, int tc, boolean imp, boolean ur, String s) {
         this.title = t;
@@ -53,11 +53,8 @@ class Task {
         
         this.important = imp;
     }
-    public String getUrgent() {
-        if(urgent) {
-            return "urgent";
-        }
-        return "not urgent";
+    public boolean getUrgent() {
+        return this.urgent;
     }
     public void setUrgent(boolean ur) {
         this.urgent = ur;
@@ -75,11 +72,11 @@ class Task {
     
     public String toString() {
         String str = "";
-        if(important) {
-         str += title + ", " + assignedTo + ", " + timeToComplete + ", " + "Important" + ", " + urgent + ", " + status;
+        if(important && urgent) {
+         str += title + ", " + assignedTo + ", " + timeToComplete + ", " + "Important" + ", " + "Urgent" + ", " + status;
     }
     else {
-        str += title + ", " + assignedTo + ", " + timeToComplete + ", " + " Not Important" + ", " + urgent + ", " + status;
+        str += title + ", " + assignedTo + ", " + timeToComplete + ", " + "Not Important" + ", " + "Not Urgent" + ", " + status;
     } return str;
     }
 
