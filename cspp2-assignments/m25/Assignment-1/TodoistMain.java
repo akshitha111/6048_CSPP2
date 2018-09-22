@@ -63,11 +63,8 @@ class Task {
         return this.status;
     }
     public void setStatus(String s) {
-        if(s == null){
-            this.status = "Invalid Status";
-            return;
-        }
-        this.status = s;
+        if(s == null)
+        this.status = "Invalid status dud";
     }
     
     public String toString() {
@@ -75,9 +72,16 @@ class Task {
         if(important && urgent) {
          str += title + ", " + assignedTo + ", " + timeToComplete + ", " + "Important" + ", " + "Urgent" + ", " + status;
     }
-    else {
+    if(!important && !urgent) {
         str += title + ", " + assignedTo + ", " + timeToComplete + ", " + "Not Important" + ", " + "Not Urgent" + ", " + status;
+    } 
+    if(important && !urgent) {
+        str += title + ", " + assignedTo + ", " + timeToComplete + ", " + "Important" + ", " + "Not Urgent" + ", " + status;
+    }
+    if(!important && urgent) {
+        str += title + ", " + assignedTo + ", " + timeToComplete + ", " + "Important" + ", " + "Urgent" + ", " + status;
     } return str;
+    
     }
 
 }
