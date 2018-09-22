@@ -58,7 +58,7 @@ class Task {
         this.important = imp;
     }
     public String getUrgent() {
-        if(this.urgent == true) {
+        if(urgent) {
             return "urgent";
         }
         return "not urgent";
@@ -70,6 +70,9 @@ class Task {
         return this.status;
     }
     public void setStatus(String s) {
+        if(status == null){
+            this.status = "Invalid Status";
+        }
         this.status = s;
     }
     public String toString() {
