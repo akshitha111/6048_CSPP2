@@ -18,12 +18,6 @@ class Task {
         this.important = imp;
         this.urgent = ur;
         this.status = s;
-        if(title == null) {
-            System.out.println("Title not provided");
-        }
-        /*if(timeToComplete < 0) {
-            throw new Exception("Invalid timeToComplete" + (timeToComplete));
-        }*/
     }
 
 
@@ -138,12 +132,19 @@ public class TodoistMain {
             String[] tokens = s.nextLine().split(",");
             switch (tokens[0]) {
                 case "task":
-                    try{
-                        if(tokens != null)
-                    testTask(tokens);
-                }catch(Exception e) {
-                    System.out.println(e.getMessage());
-                }
+                    //try{
+                        if(tokens[1] != ""){
+                            testTask(tokens);}
+                            else {
+                                    
+                                    System.out.println("Title not provided");}
+                            
+
+                    
+                        //}
+/*                catch(Exception e) {
+                    System.out.println("Title not provided");
+                }*/
                 break;
                 case "add-task":
                     testAddTask(todo, tokens);
@@ -211,6 +212,10 @@ public class TodoistMain {
         boolean important = tokens[4].equals("y");
         boolean urgent = tokens[5].equals("y");
         String status = tokens[6];
+        if(tokens[0] == ""){
+            System.out.println("Title not provided");
+            return;
+        }
         return new Task(
             title, assignedTo, timeToComplete, important, urgent, status);
     }
