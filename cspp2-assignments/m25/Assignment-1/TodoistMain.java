@@ -77,7 +77,10 @@ class Task {
         String str = "";
         if(important) {
          str += title + ", " + assignedTo + ", " + timeToComplete + ", " + "Important" + ", " + urgent + ", " + status;
-    }return str;
+    }
+    else {
+        str += title + ", " + assignedTo + ", " + timeToComplete + ", " + " Not Important" + ", " + urgent + ", " + status;
+    } return str;
     }
 
 }
