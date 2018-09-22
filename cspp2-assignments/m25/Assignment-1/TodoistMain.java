@@ -18,8 +18,15 @@ class Task {
         this.important = imp;
         this.urgent = ur;
         this.status = s;
+        /*if(title == null) {
+            throw new Exception("Title not provided");
+        }
+        if(timeToComplete < 0) {
+            throw new Exception("Invalid timeToComplete" + (timeToComplete));
+        }
+    }*/
+}
 
-    }
     public String getTitle() {
         return this.title;
     }
@@ -38,18 +45,15 @@ class Task {
     public void setTimeToComplete(int tc) {
         this.timeToComplete = tc;
     }
-    public String getImportant() {
-        String str = "";
-        if(important == true) {
-
-             str = "Important";
-        }return str;
-        
-        //return "not important";
-        
+    public boolean getImportant() {
+        return this.important;
+                
     }
-    public void setImportant(boolean imp) {
-        this.important = imp;
+    public String setImportant(boolean imp) {
+        if(imp == true)
+        return "Important";
+    else
+        return ("Not Important");
     }
     public String getUrgent() {
         if(urgent) {
