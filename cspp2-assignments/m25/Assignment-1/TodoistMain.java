@@ -8,7 +8,7 @@ class Task {
     private String title;
     private String assignedTo;
     private int timeToComplete;
-    private boolean important;
+    private boolean important = true;
     private boolean urgent;
     private String status;
     public Task(String t, String at, int tc, boolean imp, boolean ur, String s) {
@@ -45,16 +45,12 @@ class Task {
     public void setTimeToComplete(int tc) {
         this.timeToComplete = tc;
     }
-    public String getImportant() {
-        String str1 = "";
-        if(important == true) {
-        str1 += "Important";
-    }
-    
-        return str1;
+    public boolean getImportant() {
+        return this.important;
                 
     }
     public void setImportant(boolean imp) {
+        
         this.important = imp;
     }
     public String getUrgent() {
@@ -76,9 +72,11 @@ class Task {
         }
         this.status = s;
     }
+    
     public String toString() {
-        return title + ", " + assignedTo + ", " + timeToComplete + ", " + important + ", " + urgent + ", " + status;
+        return title + ", " + assignedTo + ", " + timeToComplete + ", " + "Important" + ", " + urgent + ", " + status;
     }
+
 }
 
 class Todoist {
