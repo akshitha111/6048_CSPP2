@@ -18,14 +18,14 @@ class Task {
         this.important = imp;
         this.urgent = ur;
         this.status = s;
-        /*if(title == null) {
-            throw new Exception("Title not provided");
+        if(title == null) {
+            System.out.println("Title not provided");
         }
-        if(timeToComplete < 0) {
+        /*if(timeToComplete < 0) {
             throw new Exception("Invalid timeToComplete" + (timeToComplete));
-        }
-    }*/
-}
+        }*/
+    }
+
 
     public String getTitle() {
         return this.title;
@@ -86,6 +86,7 @@ class Task {
 
 }
 
+
 class Todoist {
     private Task[] task;
     private int size;
@@ -97,21 +98,9 @@ class Todoist {
     public void addTask(Task t) {
         task[size++] = t;
     }
-    /*public Task getNextTask(String name) {
-        Task[] arr = new Task[count];
-        for (Task task : arr) {
-            if(arr[i].getAssignedTo().equals(name) && arr[i].getStatus().equals("todo") && arr[i].getImportant() == true && arr[i].getUrgent() == true) {
-                arr.testAddTask(task);
-            }
-         else(arr[i].getAssignedTo().equals(name) && arr[i].getStatus().equals("todo") && arr[i].getImportant() == true && arr[i].getUrgent() == true) {
-            arr.testAddTask(task);
-        }
-    }return arr;
-        
-    }*/
-
+    
     public int totalTime4Completion() {
-        //tasks = new Task();
+       
         return tasks.getTimeToComplete();
 
     }
@@ -149,7 +138,12 @@ public class TodoistMain {
             String[] tokens = s.nextLine().split(",");
             switch (tokens[0]) {
                 case "task":
+                    try{
+                        if(tokens != null)
                     testTask(tokens);
+                }catch(Exception e) {
+                    System.out.println(e.getMessage());
+                }
                 break;
                 case "add-task":
                     testAddTask(todo, tokens);
