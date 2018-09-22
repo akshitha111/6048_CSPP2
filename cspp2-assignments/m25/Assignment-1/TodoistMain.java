@@ -8,7 +8,7 @@ class Task {
     private String title;
     private String assignedTo;
     private int timeToComplete;
-    private boolean important;
+    private boolean important = true;
     private boolean urgent;
     private String status;
     public Task(String t, String at, int tc, boolean imp, boolean ur, String s) {
@@ -39,10 +39,11 @@ class Task {
         this.timeToComplete = tc;
     }
     public String getImportant() {
-        if(important) {
-            return "important";
-        }
-        return "not important";
+        //if(important) 
+            return "Important";
+        
+        //return "not important";
+        
     }
     public void setImportant(boolean imp) {
         this.important = imp;
