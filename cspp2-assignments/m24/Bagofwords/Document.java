@@ -210,7 +210,7 @@ class Solution {
             System.out.println("Maximum similarity is between " + "file" + a + ".txt and file" + b + ".txt");
             }
             catch(NoSuchElementException e) {
-                System.out.println("Empty Directory");
+                System.out.println("empty directory");
             }
         }
     }
