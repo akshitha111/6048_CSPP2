@@ -57,7 +57,6 @@ class Document {
      * @return  returns the cleaned up string.
      */
     public static Map removewords(final String text) {
-        // text = text.toLowerCase();
         String word = "";
         Pattern p = Pattern.compile("[^0-9_.,]");
         Matcher match = p.matcher(text);
