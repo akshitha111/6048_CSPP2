@@ -69,7 +69,6 @@ class Substring {
     }
     final int hundred = 100;
     lcsValue = ((result * 2) / totalLength) * hundred;
-    // System.out.println((int)lcsValue);
     return Math.round(lcsValue * hundred) / hundred;
     }
 }
