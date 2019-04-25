@@ -1,0 +1,15 @@
+Starting audit...
+[ERROR] C:\Users\akshitha\Desktop\CSPP-2-aasignments\CSPP_2\6048_CSPP2\cspp2-assignments\m4\Assignment-1\package-info.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+Audit done.
+Checkstyle ends with 1 errors.
+Starting audit...
+[ERROR] C:\Users\akshitha\Desktop\CSPP-2-aasignments\CSPP_2\6048_CSPP2\cspp2-assignments\m4\Assignment-1\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] C:\Users\akshitha\Desktop\CSPP-2-aasignments\CSPP_2\6048_CSPP2\cspp2-assignments\m4\Assignment-1\Solution.java:3: Missing a Javadoc comment. [JavadocType]
+[ERROR] C:\Users\akshitha\Desktop\CSPP-2-aasignments\CSPP_2\6048_CSPP2\cspp2-assignments\m4\Assignment-1\Solution.java:3:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
+[ERROR] C:\Users\akshitha\Desktop\CSPP-2-aasignments\CSPP_2\6048_CSPP2\cspp2-assignments\m4\Assignment-1\Solution.java:5: Line has trailing spaces. [RegexpSingleline]
+[ERROR] C:\Users\akshitha\Desktop\CSPP-2-aasignments\CSPP_2\6048_CSPP2\cspp2-assignments\m4\Assignment-1\Solution.java:7:1: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] C:\Users\akshitha\Desktop\CSPP-2-aasignments\CSPP_2\6048_CSPP2\cspp2-assignments\m4\Assignment-1\Solution.java:7:25: Parameter args should be final. [FinalParameters]
+[ERROR] C:\Users\akshitha\Desktop\CSPP-2-aasignments\CSPP_2\6048_CSPP2\cspp2-assignments\m4\Assignment-1\Solution.java:16: 'if' construct must use '{}'s. [NeedBraces]
+[ERROR] C:\Users\akshitha\Desktop\CSPP-2-aasignments\CSPP_2\6048_CSPP2\cspp2-assignments\m4\Assignment-1\Solution.java:16:11: 'if' is not followed by whitespace. [WhitespaceAfter]
+Audit done.
+Checkstyle ends with 8 errors.

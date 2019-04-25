@@ -1,32 +1,21 @@
-
 import java.util.Scanner;
-/** Do not modify this main function.
-*/
-public final class Solution {
-    /** This is class.
-    */
-    private Solution() {
-    /** This is constructor.
-    */
-    }
-/**
-* Class for solution.
-* @param args String
-*/
-    public static void main(final String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int[] a = new int[n];
-        for (int i = 0; i < n; i++) {
-            a[i] = sc.nextInt();
-        }
-        int max = a[0];
-        for (int i = 0; i < n; i++) {
-            if (max < a[i]) {
-                max = a[i];
-            }
-            }
-        System.out.println(max);
-    }
-    }
 
+public final class Solution {
+
+   
+
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int a = sc.nextInt();
+    int[] arr = new int[a];
+    for (int i = 0; i < a; i++) {
+        arr[i] = sc.nextInt();
+    }
+    int max = arr[0];
+    for (int j = 0; j < arr.length; j++) {
+        if(max < arr[j])
+            max = arr[j];
+    }
+    System.out.println(max);
+}
+}

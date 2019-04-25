@@ -1,0 +1,32 @@
+########## Testcase 0: Passed ##########
+Expected Output: 
+99
+
+Your Output: 
+99
+----------------------------------------
+
+########## Testcase 1: Passed ##########
+Expected Output: 
+492
+
+Your Output: 
+492
+----------------------------------------
+
+########## Testcase 2: Passed ##########
+Expected Output: 
+941
+
+Your Output: 
+941
+----------------------------------------
+
+########## Testcase 3: Passed ##########
+Expected Output: 
+984
+
+Your Output: 
+984
+----------------------------------------
+
